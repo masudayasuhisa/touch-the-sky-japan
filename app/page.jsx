@@ -39,6 +39,7 @@ const Slideshow = ({ images }) => {
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isInquiryVisible, setIsInquiryVisible] = useState(false)
 
   const programImages = [
     "/images/program_schedule_snow_1776918381907.png",
@@ -70,9 +71,21 @@ export default function App() {
       observer.observe(el);
     });
 
+    const inquiryObserver = new IntersectionObserver((entries) => {
+      if (entries[0]) {
+        setIsInquiryVisible(entries[0].isIntersecting);
+      }
+    }, { threshold: 0.1 });
+
+    const inquiryEl = document.getElementById('inquiry');
+    if (inquiryEl) {
+      inquiryObserver.observe(inquiryEl);
+    }
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
       observer.disconnect();
+      inquiryObserver.disconnect();
     }
   }, []);
 
@@ -86,7 +99,7 @@ export default function App() {
       <header className="hero">
         <div className="hero-content">
           <p className="collection animate-up" style={{transitionDelay: '0.3s'}}>Myoko Collection #01</p>
-          <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Snow Learning Program<br/><span>Touch the Snow, Reach the Sky</span></h1>
+          <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Snow <br className="mobile-break"/>Learning Program<span>Touch the Snow, <br className="mobile-break"/>Reach the Sky</span></h1>
           <p className="subcopy animate-up" style={{transitionDelay: '0.7s'}}>Where First Snow Opens New Horizons</p>
         </div>
       </header>
@@ -245,6 +258,13 @@ export default function App() {
         aria-label="Scroll to top"
       >
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+
+      <button 
+        className={`floating-cta ${isScrolled && !isInquiryVisible ? 'visible' : ''}`}
+        onClick={() => document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' })}
+      >
+        Inquire Now
       </button>
     </>
   )

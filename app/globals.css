@@ -157,9 +157,9 @@ nav.scrolled {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background-image: url('/images/hero_snow_mountain_1776904736000.png');
+  background-image: url('/images/myoko_hero.png');
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -210,6 +210,23 @@ nav.scrolled {
   font-weight: 300;
   max-width: 600px;
   margin: 0 auto;
+}
+
+/* Hero Schedule Badge */
+.hero-schedule-badge {
+  display: inline-block;
+  background: rgba(195, 157, 99, 0.15);
+  border: 1px solid var(--color-accent);
+  color: var(--color-text-light);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Intro/Concept Section */
@@ -379,22 +396,119 @@ nav.scrolled {
   color: #4a4a4a;
 }
 
-.venue-image {
-  flex: 1;
-  overflow: hidden;
-  border-radius: 4px;
+/* Venue Gallery */
+.venue-gallery {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
-.venue-image img {
-  width: 100%;
+.gallery-main {
+  position: relative;
   border-radius: 4px;
+  overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  display: block;
+  height: 380px;
+}
+
+.gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.6s ease;
 }
 
-.venue-image:hover img {
+.gallery-main:hover img {
   transform: scale(1.03);
+}
+
+.gallery-sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  height: 180px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+  color: var(--color-text-light);
+  padding: 1.5rem 1.2rem 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* YouTube Video Section */
+.video-section {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  padding: 8rem 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.video-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-container h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.video-container h2 span {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+}
+
+.youtube-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Myoko Intro Section */
@@ -438,78 +552,97 @@ nav.scrolled {
   color: #4a4a4a;
 }
 
-/* Olympians Section */
-.olympians {
+/* Activities Section */
+.activities {
   padding: 8rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.olympians-header {
+.activities-header {
   text-align: center;
   margin-bottom: 5rem;
 }
 
-.olympians-header h2 {
+.activities-header h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.olympians-header p {
+.activities-header p {
   font-size: 1.1rem;
   color: #666;
 }
 
-.olympian-card {
-  display: flex;
-  align-items: center;
+.activities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  margin-bottom: 6rem;
 }
 
-.olympian-card:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.olympian-image {
-  flex: 1;
-  overflow: hidden;
+.activity-card {
+  background: #fff;
+  padding: 4rem;
   border-radius: 4px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+  border-top: 3px solid var(--color-accent);
+  position: relative;
 }
 
-.olympian-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  display: block;
-  transition: transform 0.6s ease;
-}
-
-.olympian-image:hover img {
-  transform: scale(1.03);
-}
-
-.olympian-info {
-  flex: 1;
-}
-
-.olympian-info h3 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.olympian-info h4 {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
+.activity-badge {
+  display: inline-block;
+  background: rgba(195, 157, 99, 0.1);
   color: var(--color-accent);
-  letter-spacing: 0.1em;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
 }
 
-.olympian-info p {
-  color: #4a4a4a;
+.activity-card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-bg-dark);
+}
+
+.activity-sub {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 2.5rem;
   font-weight: 300;
+}
+
+.activity-list {
+  list-style: none;
+}
+
+.activity-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.activity-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-accent);
+}
+
+.activity-list li strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-bg-dark);
+  font-weight: 400;
+  margin-bottom: 0.25rem;
 }
 
 /* Partners Section */
@@ -539,18 +672,24 @@ nav.scrolled {
   flex-wrap: wrap;
 }
 
-.partner-logo img {
-  width: 140px;
-  height: auto;
-  opacity: 0.4;
-  filter: grayscale(100%);
-  transition: all 0.4s ease;
-  mix-blend-mode: multiply; /* blends white background into the off-white page background seamlessly */
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.partner-logo:hover img {
-  opacity: 0.8;
-  transform: scale(1.05);
+.partner-logo .svg-logo {
+  height: 48px;
+  width: auto;
+  color: #888;
+  opacity: 0.45;
+  transition: all 0.4s ease;
+}
+
+.partner-logo:hover .svg-logo {
+  color: var(--color-accent);
+  opacity: 1;
+  transform: scale(1.03);
 }
 
 /* Pricing Section */
@@ -584,20 +723,6 @@ nav.scrolled {
   max-width: 600px;
   width: 100%;
   text-align: left;
-}
-
-.pricing-card .price {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 0.5rem;
-}
-
-.pricing-card .price span {
-  font-size: 3.5rem;
-  color: var(--color-bg-dark);
-  display: inline-block;
-  margin-top: 0.5rem;
 }
 
 .price-desc {
@@ -637,6 +762,140 @@ nav.scrolled {
   font-size: 0.85rem;
   color: #888;
   font-style: italic;
+}
+
+/* Program Package schedule */
+.package-schedule {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.schedule-badge {
+  background: rgba(195, 157, 99, 0.1);
+  color: var(--color-accent);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.package-schedule h3 {
+  font-size: 2.2rem;
+  color: var(--color-bg-dark);
+}
+
+/* Access / Location Section */
+.access {
+  padding: 8rem 4rem;
+  background-color: #Faf8f5;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.access-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+}
+
+.access-map {
+  flex: 1.1;
+  width: 100%;
+  position: sticky;
+  top: 100px;
+}
+
+.access-info {
+  flex: 1;
+}
+
+.access-info h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--color-bg-dark);
+}
+
+.access-info h2 span {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: var(--font-sans);
+}
+
+.access-intro {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.route-option {
+  margin-bottom: 3.5rem;
+}
+
+.route-option h3 {
+  font-size: 1.8rem;
+  color: var(--color-bg-dark);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-serif);
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1rem;
+}
+
+.route-steps {
+  list-style: none;
+  border-left: 1px solid #eee;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.route-steps li {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.route-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.step-badge {
+  background: var(--color-bg-dark);
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+  height: fit-content;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+.route-steps li strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-bg-dark);
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.route-steps li p {
+  color: #666;
+  font-size: 0.95rem;
+  font-weight: 300;
 }
 
 /* Footer / CTA */
@@ -826,14 +1085,29 @@ footer {
   .program { padding: 4rem 2rem; }
   .program-flex { flex-direction: column; gap: 3rem; }
   .timeline { margin-left: 0; padding-left: 2rem; }
-  .olympian-card, .olympian-card:nth-child(even) { flex-direction: column; gap: 2rem; }
   .partners { padding: 4rem 2rem; }
   .partners-grid { gap: 3rem; }
-  .partner-logo img { width: 100px; }
   .pricing { padding: 4rem 2rem; }
   .pricing-card { padding: 3rem 2rem; }
   .cta { padding: 4rem 2rem; }
   .scroll-to-top { bottom: 5.5rem; right: 1.5rem; width: 44px; height: 44px; }
+
+  /* Responsive layouts for new sections */
+  .venue-gallery { flex-direction: column; height: auto; }
+  .gallery-main { height: 280px; }
+  .gallery-item { height: 140px; }
+  
+  .video-section { padding: 4rem 2rem; }
+  .video-container h2 { font-size: 2.2rem; }
+  
+  .activities { padding: 4rem 2rem; }
+  .activities-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .activity-card { padding: 2.5rem 2rem; }
+
+  .access { padding: 4rem 2rem; }
+  .access-container { flex-direction: column; gap: 3rem; }
+  .access-map { position: relative; top: 0; }
+  .access-info h2 { font-size: 2.2rem; }
 }
 
 @media (max-width: 414px) {

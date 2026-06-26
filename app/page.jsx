@@ -1,6 +1,48 @@
 "use client";
 
 import { useEffect, useState } from 'react'
+import { sendInquiryEmail } from './actions'
+
+// Custom High-Fidelity SVG Partner Logos
+const LotteAraiLogo = () => (
+  <svg className="svg-logo" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 42 L35 20 L45 32 L60 10 L75 42 Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+    <path d="M35 42 L45 34 L52 42 Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="currentColor" opacity="0.3" />
+    <text x="88" y="28" fontFamily="var(--font-serif)" fontSize="14" letterSpacing="0.1em" fill="currentColor" fontWeight="600">LOTTE ARAI</text>
+    <text x="88" y="42" fontFamily="var(--font-sans)" fontSize="9" letterSpacing="0.25em" fill="currentColor">RESORT</text>
+  </svg>
+);
+
+const NiigataPrefectureLogo = () => (
+  <svg className="svg-logo" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="35" cy="30" r="16" stroke="currentColor" strokeWidth="2" />
+    <circle cx="35" cy="30" r="10" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
+    <path d="M35 14 L35 46 M19 30 L51 30" stroke="currentColor" strokeWidth="1.5" />
+    <path d="M24 19 L46 41 M24 41 L46 19" stroke="currentColor" strokeWidth="1" />
+    <text x="68" y="28" fontFamily="var(--font-serif)" fontSize="13" letterSpacing="0.08em" fill="currentColor" fontWeight="600">NIIGATA PREF.</text>
+    <text x="68" y="42" fontFamily="var(--font-sans)" fontSize="9" letterSpacing="0.1em" fill="currentColor">新潟県公式パートナー</text>
+  </svg>
+);
+
+const MyokoCityLogo = () => (
+  <svg className="svg-logo" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="35" cy="30" r="16" stroke="currentColor" strokeWidth="2" />
+    <path d="M35 16 L23 38 H47 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
+    <path d="M35 22 L28 34 H42 Z" stroke="currentColor" strokeWidth="1" fill="currentColor" opacity="0.3" />
+    <text x="68" y="28" fontFamily="var(--font-serif)" fontSize="13" letterSpacing="0.08em" fill="currentColor" fontWeight="600">MYOKO CITY</text>
+    <text x="68" y="42" fontFamily="var(--font-sans)" fontSize="9" letterSpacing="0.1em" fill="currentColor">妙高市公式パートナー</text>
+  </svg>
+);
+
+const TourismAssociationLogo = () => (
+  <svg className="svg-logo" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M35 14 L35 46 M19 30 L51 30 M24 19 L46 41 M24 41 L46 19" stroke="currentColor" strokeWidth="2" />
+    <circle cx="35" cy="30" r="6" stroke="currentColor" strokeWidth="1.5" fill="var(--color-bg-light)" />
+    <path d="M35 18 L33 22 H37 Z M35 42 L33 38 H37 Z M43 30 L39 28 V32 Z M27 30 L31 28 V32 Z" fill="currentColor" />
+    <text x="68" y="28" fontFamily="var(--font-serif)" fontSize="12" letterSpacing="0.05em" fill="currentColor" fontWeight="600">MYOKO TOURISM</text>
+    <text x="68" y="42" fontFamily="var(--font-sans)" fontSize="9" letterSpacing="0.05em" fill="currentColor">地元観光協会加盟</text>
+  </svg>
+);
 
 const Slideshow = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,7 +50,7 @@ const Slideshow = ({ images }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4500); // 4.5 seconds per slide
+    }, 4500);
     return () => clearInterval(timer);
   }, [images.length]);
 
@@ -40,17 +82,59 @@ const Slideshow = ({ images }) => {
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isInquiryVisible, setIsInquiryVisible] = useState(false)
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const data = new FormData();
+      data.append('name', formData.name);
+      data.append('email', formData.email);
+      data.append('message', formData.message);
+      
+      await sendInquiryEmail(data);
+
+      const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '819012345678';
+      const text = `Hello Touch The Sky Japan! I would like to inquire about the program.
+
+Name: ${formData.name}
+Email: ${formData.email}
+Message:
+${formData.message}`;
+
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
+      
+      window.open(whatsappUrl, '_blank');
+      setFormData({ name: '', email: '', message: '' });
+      
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("An error occurred. Please try again or contact us directly on WhatsApp.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
 
   const programImages = [
     "/images/program_schedule_snow_1776918381907.png",
     "/images/program_snow_boots_1776918939615.png",
-    "/images/program_snow_trail_1776918954245.png"
+    "/images/program_ski_lesson.png"
   ];
 
   const myokoImages = [
-    "/images/myoko_village_snow_1776918084759.png",
-    "/images/myoko_onsen_1776918970636.png",
-    "/images/myoko_dining_1776918987702.png"
+    "/images/myoko_intro_pond.png",
+    "/images/myoko_intro_falls.png",
+    "/images/myoko_intro_onsen.png",
+    "/images/myoko_intro_dining.png"
   ];
 
   useEffect(() => {
@@ -100,6 +184,9 @@ export default function App() {
         <div className="hero-content">
           <p className="collection animate-up" style={{transitionDelay: '0.3s'}}>Myoko Collection #01</p>
           <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Snow <br className="mobile-break"/>Learning Program<span>Touch the Snow, <br className="mobile-break"/>Reach the Sky</span></h1>
+          <div className="hero-schedule-badge animate-up" style={{transitionDelay: '0.6s'}}>
+            <span>March 2027</span>
+          </div>
           <p className="subcopy animate-up" style={{transitionDelay: '0.7s'}}>Where First Snow Opens New Horizons</p>
         </div>
       </header>
@@ -147,10 +234,38 @@ export default function App() {
         <div className="venue-text">
           <h2 className="animate-up" style={{transitionDelay: '0.1s'}}><span>The Venue</span>Lotte Arai Resort</h2>
           <p className="animate-up" style={{transitionDelay: '0.2s'}}>Located at the foot of Mt. Okenashi, Lotte Arai Resort offers an expansive, private mountain atmosphere directly connected to some of the world's finest powder snow. As Asia's premier luxury mountain resort, it boasts world-class hospitality, ensuring exceptional comfort for your family.</p>
-          <p className="animate-up" style={{transitionDelay: '0.3s'}}>From ski-in/ski-out convenience to premium dining and serene spa facilities, this resort serves as the luxurious, stress-free basecamp for your child's educational journey.</p>
+          <p className="animate-up" style={{transitionDelay: '0.3s'}}>From ski-in/ski-out convenience to premium dining and serene spa facilities, this resort serves as the luxurious, stress-free basecamp for your child's educational journey. Highlighting our luxury guest rooms designed to provide premium comfort and rest.</p>
         </div>
-        <div className="venue-image animate-up">
-          <img src="/images/venue_lotte_arai_resort_1776920185431.png" alt="Lotte Arai Resort in winter" />
+        <div className="venue-gallery animate-up">
+          <div className="gallery-main">
+            <img src="/images/lotte_arai_interior.png" alt="Lotte Arai Resort Luxury Guest Room" />
+            <div className="gallery-label">Luxury Guest Room</div>
+          </div>
+          <div className="gallery-sub">
+            <div className="gallery-item">
+              <img src="/images/lotte_arai_exterior.png" alt="Lotte Arai Resort Winter Exterior" />
+              <div className="gallery-label">Resort Exterior</div>
+            </div>
+            <div className="gallery-item">
+              <img src="/images/lotte_arai_lobby.png" alt="Lotte Arai Resort Grand Lobby" />
+              <div className="gallery-label">Grand Lobby</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="video-section">
+        <div className="video-container animate-up">
+          <h2><span>Experience the Mountain</span>Official Resort Film</h2>
+          <div className="youtube-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/6jAElpWf7ZM"
+              title="Lotte Arai Resort Official Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -165,31 +280,37 @@ export default function App() {
         </div>
       </section>
 
-      <section className="olympians">
-        <div className="olympians-header">
-          <h2 className="animate-up">Learn from the World's Best</h2>
-          <p className="animate-up" style={{transitionDelay: '0.1s'}}>We believe in providing the absolute highest standard of experience. That is why we collaborate with elite Olympic athletes to inspire the next generation.</p>
+      <section className="activities">
+        <div className="activities-header">
+          <h2 className="animate-up">Exclusive Winter Activities</h2>
+          <p className="animate-up" style={{transitionDelay: '0.1s'}}>Beyond skiing, discover curated experiences designed for the entire family.</p>
         </div>
-
-        <div className="olympian-card">
-          <div className="olympian-image animate-up">
-            <img src="/images/olympian_snowboarder_1776904772015.png" alt="Professional Snowboarder in action" />
+        <div className="activities-grid">
+          <div className="activity-card animate-up" style={{transitionDelay: '0.2s'}}>
+            <div className="activity-badge">For Families</div>
+            <h3>Family Snow Adventures</h3>
+            <p className="activity-sub">Create unforgettable memories together in a winter wonderland.</p>
+            <ul className="activity-list">
+              <li>
+                <strong>Snow Rafting & Tubing:</strong> Thrilling rides behind a snowmobile and custom sledding runs in the resort's adventure park.
+              </li>
+              <li>
+                <strong>Snowshoe Forest Explorations:</strong> A gentle, guided winter nature walk to discover forest secrets and enjoy hot chocolate in the snow.
+              </li>
+            </ul>
           </div>
-          <div className="olympian-info">
-            <h3 className="animate-up" style={{transitionDelay: '0.1s'}}>Ryusei Yamada</h3>
-            <h4 className="animate-up" style={{transitionDelay: '0.2s'}}>Beijing 2022 Olympian</h4>
-            <p className="animate-up" style={{transitionDelay: '0.3s'}}>A leading figure in the new generation of professional snowboarders. His presence brings an unparalleled level of expertise. Hearing firsthand the mindset of a top athlete—how they face fear, adapt to the mountain, and push limits—offers invaluable life lessons far beyond the snow.</p>
-          </div>
-        </div>
-
-        <div className="olympian-card">
-          <div className="olympian-image animate-up">
-            <img src="/images/hero_snow_mountain_1776904736000.png" alt="Sena Tomita Background" />
-          </div>
-          <div className="olympian-info">
-            <h3 className="animate-up" style={{transitionDelay: '0.1s'}}>Sena Tomita</h3>
-            <h4 className="animate-up" style={{transitionDelay: '0.2s'}}>Beijing 2022 Olympic Bronze Medalist</h4>
-            <p className="animate-up" style={{transitionDelay: '0.3s'}}>A world-class athlete who has reached the pinnacle of her sport. Sena's journey of perseverance and global success serves as a profound inspiration. Her involvement elevates the program from a simple lesson to an extraordinary encounter with excellence.</p>
+          <div className="activity-card animate-up" style={{transitionDelay: '0.3s'}}>
+            <div className="activity-badge">For Parents</div>
+            <h3>Adult Relaxation & Culture</h3>
+            <p className="activity-sub">Indulge in sophisticated local activities while children are in their private lessons.</p>
+            <ul className="activity-list">
+              <li>
+                <strong>Onsen & Mountain Spa:</strong> Deep relaxation in Lotte Arai’s natural, open-air hot spring baths followed by premium wellness treatments.
+              </li>
+              <li>
+                <strong>Soba Making & Gastronomy:</strong> Learn the ancient craft of making handmade buckwheat noodles from local masters, paired with seasonal delicacies.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -200,37 +321,117 @@ export default function App() {
         </div>
         <div className="partners-grid animate-up" style={{transitionDelay: '0.1s'}}>
           <div className="partner-logo">
-            <img src="/images/partner_logo_1_1776920346692.png" alt="Snow Gear Partner" />
+            <LotteAraiLogo />
           </div>
           <div className="partner-logo">
-            <img src="/images/partner_logo_2_1776920357975.png" alt="Hospitality Partner" />
+            <NiigataPrefectureLogo />
           </div>
           <div className="partner-logo">
-            <img src="/images/partner_logo_3_1776920369803.png" alt="Travel Partner" />
+            <MyokoCityLogo />
           </div>
           <div className="partner-logo">
-            <img src="/images/partner_logo_4_1776920381921.png" alt="Concierge Partner" />
+            <TourismAssociationLogo />
           </div>
         </div>
       </section>
 
       <section className="pricing">
         <div className="pricing-header">
-          <h2 className="animate-up">Program Investment</h2>
-          <p className="animate-up" style={{transitionDelay: '0.1s'}}>An exclusively tailored 5-day educational journey for your family.</p>
+          <h2 className="animate-up">Exclusive Program Package</h2>
+          <p className="animate-up" style={{transitionDelay: '0.1s'}}>An exclusive winter educational journey for your family.</p>
         </div>
         <div className="pricing-content">
           <div className="pricing-card animate-up" style={{transitionDelay: '0.2s'}}>
-            <h3 className="price">Starting from <br className="mobile-break"/><span>¥600,000</span></h3>
-            <p className="price-desc">Per family (up to 4 members)</p>
+            <div className="package-schedule">
+              <span className="schedule-badge">Next Session</span>
+              <h3>March 2027</h3>
+            </div>
+            <p className="price-desc">Comprehensive Family Inclusions</p>
             <ul className="pricing-includes">
-              <li>4 Nights / 5 Days tailored snow education program</li>
-              <li>Private, elite instruction & coaching</li>
-              <li>Exclusive session with Olympic athletes</li>
-              <li>Dedicated premium interpreter & concierge</li>
-              <li>Premium snow gear & equipment management</li>
+              <li>5-Day Exclusive Snow Education Program</li>
+              <li>Daily Private Coaching by Elite Instructors</li>
+              <li>Mentorship & Interaction Sessions with Instructors</li>
+              <li>Dedicated Bilingual Interpreter & Personal Concierge Support</li>
+              <li>Premium Snow Gear & Ski Equipment Rental</li>
+              <li>Myoko Snow Learning Program Official Certificate</li>
+              <li>Local Ground Transport & Joetsu-Myoko Station Pickup Support</li>
             </ul>
-            <p className="pricing-note">* Accommodation and flights are arranged separately to suit your bespoke travel preferences.</p>
+            <p className="pricing-note">* Room accommodations at Lotte Arai Resort and flight tickets are arranged separately to suit your family's unique preferences.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="access">
+        <div className="access-container">
+          <div className="access-map animate-up">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.999999999999!2d138.204683!3d37.038166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff672a95c9fb333%3A0xe54d989f55e5a7ef!2sLotte%20Arai%20Resort!5e0!3m2!1sen!2sjp!4v1700000000000!5m2!1sen!2sjp"
+              width="100%"
+              height="450"
+              style={{ border: 0, borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lotte Arai Resort Google Map"
+            ></iframe>
+          </div>
+          <div className="access-info animate-up">
+            <h2><span>Location & Access</span>Getting to Lotte Arai Resort</h2>
+            <p className="access-intro">Located in Niigata Prefecture, Lotte Arai Resort is highly accessible from Japan's major international hubs via the Hokuriku Shinkansen (Bullet Train).</p>
+            
+            <div className="route-option">
+              <h3>From Haneda Airport (HND)</h3>
+              <ul className="route-steps">
+                <li>
+                  <span className="step-badge">Step 1</span>
+                  <div>
+                    <strong>Tokyo Monorail or Keikyu Line</strong>
+                    <p>Travel to Hamamatsucho or Shinagawa Station, then transfer to Tokyo Station (approx. 30 mins).</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="step-badge">Step 2</span>
+                  <div>
+                    <strong>Hokuriku Shinkansen (Bullet Train)</strong>
+                    <p>Take the bullet train from Tokyo Station to Joetsumyoko Station (approx. 1h 50m).</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="step-badge">Step 3</span>
+                  <div>
+                    <strong>Resort Shuttle Bus or Taxi</strong>
+                    <p>Enjoy our complimentary resort shuttle or private taxi straight to the resort (approx. 30 mins).</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="route-option">
+              <h3>From Narita Airport (NRT)</h3>
+              <ul className="route-steps">
+                <li>
+                  <span className="step-badge">Step 1</span>
+                  <div>
+                    <strong>Narita Express (N'EX) or Skyliner</strong>
+                    <p>Take the express train to Tokyo or Ueno Station (approx. 60 mins).</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="step-badge">Step 2</span>
+                  <div>
+                    <strong>Hokuriku Shinkansen (Bullet Train)</strong>
+                    <p>Take the bullet train from Tokyo/Ueno Station to Joetsumyoko Station (approx. 1h 50m).</p>
+                  </div>
+                </li>
+                <li>
+                  <span className="step-badge">Step 3</span>
+                  <div>
+                    <strong>Resort Shuttle Bus or Taxi</strong>
+                    <p>Complimentary shuttle service directly to Lotte Arai Resort lobby (approx. 30 mins).</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -239,11 +440,37 @@ export default function App() {
         <h2 className="animate-up">Inquire Now</h2>
         <p className="animate-up" style={{transitionDelay: '0.1s'}}>Take the first step towards a transformative snow experience for your family.</p>
         <div className="form-container animate-up" style={{transitionDelay: '0.2s'}}>
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Email Address" required />
-            <textarea placeholder="Message / Preferred Dates" rows="4" required></textarea>
-            <button type="submit" className="btn-primary">Submit Inquiry</button>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <input 
+              type="text" 
+              name="name"
+              placeholder="Your Name" 
+              value={formData.name}
+              onChange={handleInputChange}
+              required 
+              disabled={isSubmitting}
+            />
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Email Address" 
+              value={formData.email}
+              onChange={handleInputChange}
+              required 
+              disabled={isSubmitting}
+            />
+            <textarea 
+              name="message"
+              placeholder="Message / Preferred Dates" 
+              rows="4" 
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+              disabled={isSubmitting}
+            ></textarea>
+            <button type="submit" className="btn-primary" disabled={isSubmitting}>
+              {isSubmitting ? 'Processing...' : 'Submit Inquiry & Open WhatsApp'}
+            </button>
           </form>
         </div>
       </section>

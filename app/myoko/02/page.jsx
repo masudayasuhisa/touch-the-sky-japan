@@ -183,7 +183,7 @@ ${formData.message}`;
       <header className="hero" style={{ backgroundImage: "url('/images/hero_trail_running.png')" }}>
         <div className="hero-content">
           <p className="collection animate-up" style={{transitionDelay: '0.3s'}}>Myoko Collection #02</p>
-          <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Trail &<br className="mobile-break"/> Culture Adventure<span>Golden Trail National Series Special</span></h1>
+          <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Trail &<br className="mobile-break"/> Culture Adventure<span>Golden Trail National Series Japan - Associated Package</span></h1>
           <div className="hero-schedule-badge animate-up" style={{transitionDelay: '0.6s'}}>
             <span>Sept 16–22, 2026</span>
           </div>
@@ -213,17 +213,17 @@ ${formData.message}`;
               <div className="timeline-item animate-up" style={{transitionDelay: '0.3s'}}>
                 <h3>Day 1 (Sept 16): Arrival & Welcome</h3>
                 <h4>Adapting to the Alpine Air</h4>
-                <p>Arrive in Myoko via the Shinkansen. Transfer to the luxury Lotte Arai Resort. We gather for an evening orientation, gear-check, and a welcome dinner featuring seasonal local delicacies.</p>
+                <p>Arrive in Myoko via the Shinkansen. Transfer to the luxury Lotte Arai Resort from Joetsu-Myoko Station. We gather for an evening orientation, gear-check, and a welcome dinner featuring seasonal local delicacies.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.4s'}}>
                 <h3>Day 2–3 (Sept 17–18): Training Camp</h3>
                 <h4>Course Familiarization & Coaching</h4>
-                <p>Enjoy morning technique runs on sections of the GTWS (Golden Trail World Series) course with our local English-speaking coach. Afternoons are dedicated to recovery in open-air hot springs, local Soba buckwheat noodle-making, and discovering Niigata's historic culture.</p>
+                <p>Enjoy morning technique runs on sections of the Golden Trail National Series course with our local English-speaking coach. Afternoons are dedicated to recovery in open-air hot springs, local Soba buckwheat noodle-making, and discovering Niigata's historic culture.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.5s'}}>
-                <h3>Day 4–5 (Sept 19–20): Race Days (GTWS)</h3>
+                <h3>Day 4–5 (Sept 19–20): Race Days (Golden Trail National Series)</h3>
                 <h4>Testing Your Limits</h4>
-                <p>Participate in your chosen race category (beginner-friendly category on Day 4, intermediate on Day 5). Experience the vibrant, festival-like atmosphere of the event, complete with international outdoor gear expos, local food trucks, and cross-cultural camaraderie.</p>
+                <p>Participate in your chosen race category (beginner-friendly category on Day 4, intermediate on Day 5). Experience the vibrant, festival-like atmosphere of the event, complete with international outdoor gear expos, local food trucks, and cross-cultural camaraderie with fellow runners.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
                 <h3>Day 6–7 (Sept 21–22): Restoration & Departure</h3>
@@ -303,7 +303,7 @@ ${formData.message}`;
                 <strong>Diverse Mountain Trails:</strong> Run the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong> (exact routes are custom-tailored daily based on weather and trail conditions).
               </li>
               <li>
-                <strong>GTWS Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the GTWS race.
+                <strong>Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the Golden Trail National Series race.
               </li>
             </ul>
           </div>
@@ -331,7 +331,7 @@ ${formData.message}`;
 
       <section className="partners">
         <div className="partners-header">
-          <h2 className="animate-up">In Partnership With</h2>
+          <h2 className="animate-up">Regional Collaboration & Alignment</h2>
         </div>
         <div className="partners-grid animate-up" style={{transitionDelay: '0.1s'}}>
           <div className="partner-logo">
@@ -347,6 +347,9 @@ ${formData.message}`;
             <TourismAssociationLogo />
           </div>
         </div>
+        <p className="partners-note" style={{ textAlign: 'center', fontSize: '0.85rem', opacity: 0.6, marginTop: '2rem' }}>
+          *Official partnership and collaboration alignments are currently under consultation and pending final agreements.
+        </p>
       </section>
 
       <section className="pricing">
@@ -364,18 +367,21 @@ ${formData.message}`;
             <ul className="pricing-includes">
               <li>2-Day Guided Training Camp with English-speaking local coach</li>
               <li>6 Nights Premium Accommodations at Lotte Arai Resort</li>
+              <li>Welcome Dinner included on Day 1</li>
               <li>Local English-speaking coordinator support during stay</li>
-              <li>Guided cultural activities (Soba making, onsen workshop)</li>
+              <li>Guided cultural activities (Soba making, coffee roasting, Sasa-dango craft)</li>
               <li>Official training materials and course maps</li>
             </ul>
-            <p className="pricing-note" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>* Exclusions:</p>
+            <p className="pricing-note" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>* Exclusions & Details:</p>
             <ul className="pricing-includes" style={{ opacity: 0.85 }}>
-              <li>Flights and transportation to/from Joetsu-Myoko Station</li>
-              <li>Daily meals and personal sightseeing expenses</li>
-              <li>GTWS Race registration fees and transfers to the start line</li>
+              <li>Flights and international/domestic transportation to/from Joetsu-Myoko Station</li>
+              <li>Daily meals (except the Day 1 Welcome Dinner) and personal sightseeing expenses</li>
+              <li>
+                <strong>Race Registration & Transfers:</strong> Race registration is handled separately to allow participants to choose their preferred category. We will provide guidance and support for the registration process. Shuttles to the starting line are managed via independent local services.
+              </li>
             </ul>
-            <p className="pricing-note" style={{ color: 'var(--color-accent)', fontWeight: '500', marginTop: '1rem' }}>
-              ⚠️ Important Note: GTWS race registration capacity is limited. Early booking is highly recommended. Registration closes August 3, 2026 (or when capacity is reached).
+            <p className="pricing-note" style={{ color: 'var(--color-accent)', fontWeight: '500', marginTop: '1.5rem' }}>
+              ⚠️ Important Note: Race registration capacity is limited. Early booking is highly recommended. Registration closes August 3, 2026 (or when capacity is reached).
             </p>
           </div>
         </div>
@@ -413,7 +419,7 @@ ${formData.message}`;
                   <span className="step-badge">Step 2</span>
                   <div>
                     <strong>Hokuriku Shinkansen (Bullet Train)</strong>
-                    <p>Take the bullet train from Tokyo Station to Joetsumyoko Station (approx. 1h 50m).</p>
+                    <p>Take the bullet train from Tokyo Station to Joetsu-Myoko Station (approx. 1h 50m).</p>
                   </div>
                 </li>
                 <li>
@@ -440,7 +446,7 @@ ${formData.message}`;
                   <span className="step-badge">Step 2</span>
                   <div>
                     <strong>Hokuriku Shinkansen (Bullet Train)</strong>
-                    <p>Take the bullet train from Tokyo/Ueno Station to Joetsumyoko Station (approx. 1h 50m).</p>
+                    <p>Take the bullet train from Tokyo/Ueno Station to Joetsu-Myoko Station (approx. 1h 50m).</p>
                   </div>
                 </li>
                 <li>
@@ -458,7 +464,7 @@ ${formData.message}`;
 
       <section className="cta" id="inquiry">
         <h2 className="animate-up">Connect With Us</h2>
-        <p className="animate-up" style={{transitionDelay: '0.1s'}}>Take the first step towards a premium endurance experience in Myoko.</p>
+        <p className="animate-up" style={{transitionDelay: '0.1s'}}>Take the first step towards a premium endurance experience in Myoko.<br /><span style={{ fontSize: '0.9rem', opacity: 0.8, display: 'inline-block', marginTop: '0.5rem' }}>(Limited seats / Inquiry first / No obligation)</span></p>
         <div className="form-container animate-up" style={{transitionDelay: '0.2s'}}>
           <form className="contact-form" onSubmit={handleSubmit}>
             <input 
@@ -491,6 +497,9 @@ ${formData.message}`;
             <button type="submit" className="btn-primary" disabled={isSubmitting}>
               {isSubmitting ? 'Processing...' : 'Submit Inquiry & Open WhatsApp'}
             </button>
+            <p className="form-note" style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.7, color: 'var(--color-text-light)' }}>
+              *Submitting an inquiry is entirely free and places you under no obligation.
+            </p>
           </form>
         </div>
       </section>

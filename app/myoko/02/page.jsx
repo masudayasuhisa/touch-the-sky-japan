@@ -297,23 +297,32 @@ ${formData.message}`;
             <p className="activity-sub">Learn to navigate steep technical trails with confidence.</p>
             <ul className="activity-list">
               <li>
-                <strong>Bi-lingual Mountain Guide:</strong> Gentle instruction in English covering uphill pacing, downhill balance, and hydration tactics.
+                <strong>Bi-lingual Mountain Guide:</strong> Gentle instruction in English covering uphill pacing, downhill balance, and breathing tactics.
               </li>
               <li>
-                <strong>Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the GTWS race.
+                <strong>Diverse Mountain Trails:</strong> Run the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong> (exact routes are custom-tailored daily based on weather and trail conditions).
+              </li>
+              <li>
+                <strong>GTWS Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the GTWS race.
               </li>
             </ul>
           </div>
           <div className="activity-card animate-up" style={{transitionDelay: '0.3s'}}>
-            <div className="activity-badge">Gastronomy & Spa</div>
-            <h3>Niigata Culinary & Onsen</h3>
-            <p className="activity-sub">Recharge your body through local dining and mineral baths.</p>
+            <div className="activity-badge">Gastronomy & Culture</div>
+            <h3>Local Craft & Recovery</h3>
+            <p className="activity-sub">Recharge your body and mind through authentic Japanese culture.</p>
             <ul className="activity-list">
               <li>
                 <strong>Soba Buckwheat Noodle Craft:</strong> A private workshop with a local chef to knead and cut your own recovery noodles.
               </li>
               <li>
-                <strong>Hot Spring Recovery:</strong> Learn the custom of Japanese onsen bathing to naturally relieve sore muscles and joints.
+                <strong>Coffee Roasting & Blending:</strong> Learn the craft of roasting green beans and blending your own custom coffee for your outdoor adventures.
+              </li>
+              <li>
+                <strong>Traditional Sweet Making:</strong> Hands-on experience making <strong>Sasa-dango</strong> (traditional mugwort rice cakes filled with sweet red bean paste and wrapped in bamboo grass).
+              </li>
+              <li>
+                <strong>Hot Spring Recovery:</strong> Learn the custom of Japanese open-air onsen bathing to naturally soothe muscles and joints.
               </li>
             </ul>
           </div>

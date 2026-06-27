@@ -219,7 +219,7 @@ ${formData.message}`;
               <div className="timeline-item animate-up" style={{transitionDelay: '0.4s'}}>
                 <h3>Day 2–3 (Sept 17–18): Trail Running Basics & Flow</h3>
                 <h4>From Hiking to Running</h4>
-                <p>Learn the foundations of trail running—uphill power hiking, downhill technique, pacing, and safety. Enjoy easy-paced runs/walks through Myoko's lush forests and foothills. Spend afternoons recovering in open-air hot springs, roasting coffee, and crafting traditional Sasa-dango sweets.</p>
+                <p>Learn the foundations of trail running—uphill power hiking, downhill technique, pacing, and safety. Enjoy easy-paced runs/walks through Myoko's lush forests and foothills. Spend afternoons recovering with post-run mountain yoga, open-air hot springs, coffee roasting, and traditional Sasa-dango sweet crafting.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.5s'}}>
                 <h3>Day 4–5 (Sept 19–20): Challenge & Highlight</h3>
@@ -229,7 +229,7 @@ ${formData.message}`;
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
                 <h3>Day 6–7 (Sept 21–22): Integration & Departure</h3>
                 <h4>Carrying the Flow Home</h4>
-                <p>Day 6 is dedicated to peaceful restoration. Enjoy a recovery walk to Naena Falls or relax at the resort spa. On Day 7, checkout and take the resort shuttle to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
+                <p>Day 6 is dedicated to peaceful restoration. Enjoy a recovery yoga session, a walk to Naena Falls, or relax at the resort spa. On Day 7, checkout and take the resort shuttle to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
               </div>
             </div>
           </div>
@@ -304,6 +304,9 @@ ${formData.message}`;
                 <strong>Diverse Mountain Trails:</strong> Run and walk the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong> (exact routes are custom-tailored daily based on weather and trail conditions).
               </li>
               <li>
+                <strong>Mountain & Recovery Yoga:</strong> Integrated pre-run stretching and post-run recovery yoga sessions to release muscle tension, improve lung capacity, and realign your body.
+              </li>
+              <li>
                 <strong>Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the Golden Trail National Series race.
               </li>
             </ul>
@@ -365,13 +368,14 @@ ${formData.message}`;
               <h3>Sept 16–22, 2026</h3>
             </div>
             <p className="price-desc" style={{ fontWeight: 'bold', color: 'var(--color-accent)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-              Designed for hikers, hiker-to-run beginners, and outdoor lovers. (Prerequisite: Comfortably walk/lightly jog 5–8km in nature)
+              Designed for hikers, hiker-to-run beginners, and outdoor lovers. (Prerequisite: Comfortably walk/lightly jog 5–10km in nature)
             </p>
             <p className="price-desc">Package Inclusions</p>
             <ul className="pricing-includes">
               <li>2-Day Guided Training Camp with English-speaking local coach</li>
               <li>6 Nights Premium Accommodations at Lotte Arai Resort</li>
               <li>Welcome Dinner included on Day 1</li>
+              <li>Post-run recovery yoga sessions</li>
               <li>Local English-speaking coordinator support during stay</li>
               <li>Guided cultural activities (Soba making, coffee roasting, Sasa-dango craft)</li>
               <li>Official training materials and course maps</li>

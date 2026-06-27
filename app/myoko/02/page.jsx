@@ -185,7 +185,7 @@ ${formData.message}`;
           <p className="collection animate-up" style={{transitionDelay: '0.3s'}}>Myoko Collection #02</p>
           <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Trail &<br className="mobile-break"/> Culture Adventure<span>Golden Trail National Series Special</span></h1>
           <div className="hero-schedule-badge animate-up" style={{transitionDelay: '0.6s'}}>
-            <span>Sept/Oct 2026</span>
+            <span>Sept 16–22, 2026</span>
           </div>
           <p className="subcopy animate-up" style={{transitionDelay: '0.7s'}}>Run the Wild Volcanic Ridges, Restore in Historic Onsen</p>
         </div>
@@ -211,22 +211,22 @@ ${formData.message}`;
             </div>
             <div className="timeline">
               <div className="timeline-item animate-up" style={{transitionDelay: '0.3s'}}>
-                <h3>Day 1: Arrival & Welcome</h3>
+                <h3>Day 1 (Sept 16): Arrival & Welcome</h3>
                 <h4>Adapting to the Alpine Air</h4>
                 <p>Arrive in Myoko via the Shinkansen. Transfer to the luxury Lotte Arai Resort. We gather for an evening orientation, gear-check, and a welcome dinner featuring seasonal local delicacies.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.4s'}}>
-                <h3>Day 2–3: Training Camp</h3>
+                <h3>Day 2–3 (Sept 17–18): Training Camp</h3>
                 <h4>Course Familiarization & Coaching</h4>
                 <p>Enjoy morning technique runs on sections of the GTWS (Golden Trail World Series) course with our local English-speaking coach. Afternoons are dedicated to recovery in open-air hot springs, local Soba buckwheat noodle-making, and discovering Niigata's historic culture.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.5s'}}>
-                <h3>Day 4–5: GTWS Race Days</h3>
+                <h3>Day 4–5 (Sept 19–20): Race Days (GTWS)</h3>
                 <h4>Testing Your Limits</h4>
                 <p>Participate in your chosen race category (beginner-friendly category on Day 4, intermediate on Day 5). Experience the vibrant, festival-like atmosphere of the event, complete with international outdoor gear expos, local food trucks, and cross-cultural camaraderie.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
-                <h3>Day 6-7: Restoration & Departure</h3>
+                <h3>Day 6–7 (Sept 21–22): Restoration & Departure</h3>
                 <h4>Carrying the Ridge Within</h4>
                 <p>Day 6 is a peaceful restoration day. Take a recovery walk to Naena Falls or relax at the spa. On Day 7, checkout and take the resort shuttle to Joetsu-Myoko Station for your departure, carrying new friendships and mountain resilience back home.</p>
               </div>
@@ -349,7 +349,7 @@ ${formData.message}`;
           <div className="pricing-card animate-up" style={{transitionDelay: '0.2s'}}>
             <div className="package-schedule">
               <span className="schedule-badge">Special Edition</span>
-              <h3>Autumn 2026</h3>
+              <h3>Sept 16–22, 2026</h3>
             </div>
             <p className="price-desc">Package Inclusions</p>
             <ul className="pricing-includes">

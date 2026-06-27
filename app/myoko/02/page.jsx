@@ -183,52 +183,53 @@ ${formData.message}`;
       <header className="hero" style={{ backgroundImage: "url('/images/hero_trail_running.png')" }}>
         <div className="hero-content">
           <p className="collection animate-up" style={{transitionDelay: '0.3s'}}>Myoko Collection #02</p>
-          <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>MYOKO Trail &<br className="mobile-break"/> Culture Adventure<span>Golden Trail National Series Japan - Associated Package</span></h1>
+          <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>From Hiking <br className="mobile-break"/>to Trail Running<span>Expand Your Mountain Experience</span></h1>
           <div className="hero-schedule-badge animate-up" style={{transitionDelay: '0.6s'}}>
             <span>Sept 16–22, 2026</span>
           </div>
-          <p className="subcopy animate-up" style={{transitionDelay: '0.7s'}}>Run the Wild Volcanic Ridges, Restore in Historic Onsen</p>
+          <p className="subcopy animate-up" style={{transitionDelay: '0.7s'}}>A premium trail running journey through Myoko’s mountains, forests, hot springs, and local culture.</p>
         </div>
       </header>
 
       <section className="concept">
         <div className="concept-text">
-          <h2 className="animate-up"><span>The Concept</span>Joy of Running.<br/>A Journey of Connection.</h2>
-          <p className="animate-up" style={{transitionDelay: '0.1s'}}>In partnership with X-Trekkers, we present a premium trail running and cultural experience. Designed specifically for entry-to-intermediate runners, this program is not about competing for splits—it is about connecting with nature and community.</p>
-          <p className="animate-up" style={{transitionDelay: '0.2s'}}>Step outside the tropics and onto the rugged, volcanic topography of Myoko. Under the guidance of local coaches, you will build endurance, explore breathtaking ridge lines, and immerse yourself in the rich culinary and spiritual traditions of Japan's alpine heritage.</p>
+          <h2 className="animate-up"><span>Beyond Hiking</span>Into the Flow.</h2>
+          <p className="animate-up" style={{transitionDelay: '0.1s'}}>For those who already love the mountains, trail running opens a new door. This journey is designed for hikers and outdoor lovers who want to experience the mountains more deeply - not only by walking through them, but by moving with their terrain, rhythm, and flow.</p>
+          <p className="animate-up" style={{transitionDelay: '0.2s'}}>In Myoko, you will enter the world of trail running in a safe, enjoyable, and sustainable way. You will run at an easy pace, walk when needed, climb, descend, recover, soak in hot springs, and connect with the local mountain culture. This is not about speed. It is about expanding the way you experience the mountains.</p>
+          <p className="animate-up" style={{transitionDelay: '0.3s', fontStyle: 'italic', color: 'var(--color-accent)' }}>From hiking to trail running. From scenery to sensation. From visiting the mountains to moving with them.</p>
         </div>
-        <div className="concept-image animate-up" style={{transitionDelay: '0.3s'}}>
+        <div className="concept-image animate-up" style={{transitionDelay: '0.4s'}}>
           <img src="/images/concept_trail_running.png" alt="Adult trail runners experiencing the lush forests of Myoko" />
         </div>
       </section>
 
       <section className="program">
         <div className="program-container">
-          <h2 className="animate-up">Itinerary Framework</h2>
+          <h2 className="animate-up">Program Architecture</h2>
           <div className="program-flex">
             <div className="program-image animate-up" style={{transitionDelay: '0.2s'}}>
               <Slideshow images={programImages} />
             </div>
             <div className="timeline">
               <div className="timeline-item animate-up" style={{transitionDelay: '0.3s'}}>
-                <h3>Day 1 (Sept 16): Arrival & Welcome</h3>
-                <h4>Adapting to the Alpine Air</h4>
-                <p>Arrive in Myoko via the Shinkansen. Transfer to the luxury Lotte Arai Resort from Joetsu-Myoko Station. We gather for an evening orientation, gear-check, and a welcome dinner featuring seasonal local delicacies.</p>
+                <h3>Day 1 (Sept 16): Opening the Door</h3>
+                <h4>Preparation & Connection</h4>
+                <p>Arrive in Myoko via the Shinkansen and transfer to the luxury Lotte Arai Resort from Joetsu-Myoko Station. We gather for an evening orientation, gear-check, dynamic mobility prep, and a welcome dinner showcasing seasonal local ingredients.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.4s'}}>
-                <h3>Day 2–3 (Sept 17–18): Training Camp</h3>
-                <h4>Course Familiarization & Coaching</h4>
-                <p>Enjoy morning technique runs on sections of the Golden Trail National Series course with our local English-speaking coach. Afternoons are dedicated to recovery in open-air hot springs, local Soba buckwheat noodle-making, and discovering Niigata's historic culture.</p>
+                <h3>Day 2–3 (Sept 17–18): Trail Running Basics & Flow</h3>
+                <h4>From Hiking to Running</h4>
+                <p>Learn the foundations of trail running—uphill power hiking, downhill technique, pacing, and safety. Enjoy easy-paced runs/walks through Myoko's lush forests and foothills. Spend afternoons recovering in open-air hot springs, roasting coffee, and crafting traditional Sasa-dango sweets.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.5s'}}>
-                <h3>Day 4–5 (Sept 19–20): Race Days (Golden Trail National Series)</h3>
-                <h4>Testing Your Limits</h4>
-                <p>Participate in your chosen race category (beginner-friendly category on Day 4, intermediate on Day 5). Experience the vibrant, festival-like atmosphere of the event, complete with international outdoor gear expos, local food trucks, and cross-cultural camaraderie with fellow runners.</p>
+                <h3>Day 4–5 (Sept 19–20): Challenge & Highlight</h3>
+                <h4>Testing Your Flow</h4>
+                <p>Put your new skills to the test in the Golden Trail National Series Japan associated event. Choose the race category that fits your level, and run/walk through the stunning scenery. Enjoy the vibrant event atmosphere, global outdoor brand expos, and local food stalls.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
-                <h3>Day 6–7 (Sept 21–22): Restoration & Departure</h3>
-                <h4>Carrying the Ridge Within</h4>
-                <p>Day 6 is a peaceful restoration day. Take a recovery walk to Naena Falls or relax at the spa. On Day 7, checkout and take the resort shuttle to Joetsu-Myoko Station for your departure, carrying new friendships and mountain resilience back home.</p>
+                <h3>Day 6–7 (Sept 21–22): Integration & Departure</h3>
+                <h4>Carrying the Flow Home</h4>
+                <p>Day 6 is dedicated to peaceful restoration. Enjoy a recovery walk to Naena Falls or relax at the resort spa. On Day 7, checkout and take the resort shuttle to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
               </div>
             </div>
           </div>
@@ -237,7 +238,7 @@ ${formData.message}`;
 
       <section className="venue">
         <div className="venue-text">
-          <h2 className="animate-up" style={{transitionDelay: '0.1s'}}><span>The Venue</span>Lotte Arai Resort</h2>
+          <h2 className="animate-up" style={{transitionDelay: '0.1s'}}><span>The Basecamp</span>Lotte Arai Resort</h2>
           <p className="animate-up" style={{transitionDelay: '0.2s'}}>Set at the base of Mt. Okenashi, Lotte Arai Resort transitions from a legendary winter powder sanctuary to a vibrant, lush summer and autumn mountain paradise. It stands as Asia's premier luxury mountain basecamp, offering top-tier hospitality and premium rest for your adventure.</p>
           <p className="animate-up" style={{transitionDelay: '0.3s'}}>From direct access to pristine forest trails to exquisite regional dining and soothing natural hot springs (onsen), the resort ensures a perfectly balanced, stress-free basecamp for your high-altitude endurance training and recovery.</p>
         </div>
@@ -292,7 +293,7 @@ ${formData.message}`;
         </div>
         <div className="activities-grid">
           <div className="activity-card animate-up" style={{transitionDelay: '0.2s'}}>
-            <div className="activity-badge">Endurance & Education</div>
+            <div className="activity-badge">Transition to Flow</div>
             <h3>Local Trail Coaching</h3>
             <p className="activity-sub">Learn to navigate steep technical trails with confidence.</p>
             <ul className="activity-list">
@@ -300,7 +301,7 @@ ${formData.message}`;
                 <strong>Bi-lingual Mountain Guide:</strong> Gentle instruction in English covering uphill pacing, downhill balance, and breathing tactics.
               </li>
               <li>
-                <strong>Diverse Mountain Trails:</strong> Run the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong> (exact routes are custom-tailored daily based on weather and trail conditions).
+                <strong>Diverse Mountain Trails:</strong> Run and walk the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong> (exact routes are custom-tailored daily based on weather and trail conditions).
               </li>
               <li>
                 <strong>Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the Golden Trail National Series race.
@@ -363,6 +364,9 @@ ${formData.message}`;
               <span className="schedule-badge">Special Edition</span>
               <h3>Sept 16–22, 2026</h3>
             </div>
+            <p className="price-desc" style={{ fontWeight: 'bold', color: 'var(--color-accent)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
+              Designed for hikers, hiker-to-run beginners, and outdoor lovers. (Prerequisite: Comfortably walk/lightly jog 5–8km in nature)
+            </p>
             <p className="price-desc">Package Inclusions</p>
             <ul className="pricing-includes">
               <li>2-Day Guided Training Camp with English-speaking local coach</li>

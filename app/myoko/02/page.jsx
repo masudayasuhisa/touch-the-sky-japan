@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from 'react'
-import { sendInquiryEmail } from '../../actions'
 import ContactTab from '../../components/ContactTab'
 
 // Custom High-Fidelity SVG Partner Logos (Same as 01 for brand alignment)
@@ -82,48 +81,6 @@ const Slideshow = ({ images }) => {
 
 export default function TrailRunningApp() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isInquiryVisible, setIsInquiryVisible] = useState(false)
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const data = new FormData();
-      data.append('name', formData.name);
-      data.append('email', formData.email);
-      data.append('message', formData.message);
-      
-      await sendInquiryEmail(data);
-
-      const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '819012345678';
-      const text = `Hello Touch The Sky Japan! I am inquiring about the Trail Running Program (Collection #02).
-
-Name: ${formData.name}
-Email: ${formData.email}
-Message:
-${formData.message}`;
-
-      const encodedText = encodeURIComponent(text);
-      const whatsappUrl = `https://wa.me/${waNumber}?text=${encodedText}`;
-      
-      window.open(whatsappUrl, '_blank');
-      setFormData({ name: '', email: '', message: '' });
-      
-    } catch (error) {
-      console.error("Error submitting form", error);
-      alert("An error occurred. Please try again or contact us directly on WhatsApp.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  }
 
   const programImages = [
     "/images/program_trail_camp.png",
@@ -156,21 +113,9 @@ ${formData.message}`;
       observer.observe(el);
     });
 
-    const inquiryObserver = new IntersectionObserver((entries) => {
-      if (entries[0]) {
-        setIsInquiryVisible(entries[0].isIntersecting);
-      }
-    }, { threshold: 0.1 });
-
-    const inquiryEl = document.getElementById('inquiry');
-    if (inquiryEl) {
-      inquiryObserver.observe(inquiryEl);
-    }
-
     return () => {
       window.removeEventListener('scroll', handleScroll)
       observer.disconnect();
-      inquiryObserver.disconnect();
     }
   }, []);
 
@@ -468,42 +413,23 @@ ${formData.message}`;
       <section className="cta" id="inquiry">
         <h2 className="animate-up">Connect With Us</h2>
         <p className="animate-up" style={{transitionDelay: '0.1s'}}>Take the first step towards a premium endurance experience in Myoko.<br /><span style={{ fontSize: '0.9rem', opacity: 0.8, display: 'inline-block', marginTop: '0.5rem' }}>(Limited seats / Inquiry first / No obligation)</span></p>
-        <div className="form-container animate-up" style={{transitionDelay: '0.2s'}}>
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <input 
-              type="text" 
-              name="name"
-              placeholder="Your Name" 
-              value={formData.name}
-              onChange={handleInputChange}
-              required 
-              disabled={isSubmitting}
-            />
-            <input 
-              type="email" 
-              name="email"
-              placeholder="Email Address" 
-              value={formData.email}
-              onChange={handleInputChange}
-              required 
-              disabled={isSubmitting}
-            />
-            <textarea 
-              name="message"
-              placeholder="Message / Describe your running experience" 
-              rows="4" 
-              value={formData.message}
-              onChange={handleInputChange}
-              required
-              disabled={isSubmitting}
-            ></textarea>
-            <button type="submit" className="btn-primary" disabled={isSubmitting}>
-              {isSubmitting ? 'Processing...' : 'Submit Inquiry & Open WhatsApp'}
-            </button>
-            <p className="form-note" style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.85rem', opacity: 0.7, color: 'var(--color-text-light)' }}>
-              *Submitting an inquiry is entirely free and places you under no obligation.
-            </p>
-          </form>
+        <div className="animate-up" style={{transitionDelay: '0.2s', marginTop: '2.5rem', textAlign: 'center'}}>
+          <a 
+            href="https://wa.me/819063309143" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-primary"
+            style={{
+              display: 'inline-block',
+              textDecoration: 'none',
+              padding: '1.2rem 3rem',
+              fontSize: '1rem',
+              fontWeight: '500',
+              borderRadius: '4px'
+            }}
+          >
+            Inquire via WhatsApp
+          </a>
         </div>
       </section>
 

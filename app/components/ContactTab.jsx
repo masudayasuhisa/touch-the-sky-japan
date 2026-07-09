@@ -32,11 +32,13 @@ export default function ContactTab({ isDetailPage = false }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isDetailPage])
 
-  const targetUrl = isDetailPage ? '/myoko/02#inquiry' : '#inquiry'
+  const targetUrl = 'https://wa.me/819063309143'
 
   return (
     <a 
       href={targetUrl}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`contact-tab ${visible ? 'visible' : ''}`}
     >
       INQUIRY

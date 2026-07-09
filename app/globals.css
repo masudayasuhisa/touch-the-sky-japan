@@ -1182,3 +1182,29 @@ footer {
   }
 }
 
+/* Tour Operator details layout rules */
+.operator-row {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+.operator-label {
+  font-weight: 600;
+  color: #121212;
+  width: 250px;
+  flex-shrink: 0;
+}
+.operator-value {
+  color: #555;
+}
+@media (max-width: 768px) {
+  .operator-row {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .operator-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}
+
+

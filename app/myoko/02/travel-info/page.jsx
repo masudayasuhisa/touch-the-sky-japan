@@ -354,6 +354,67 @@ export default function TravelInfoPage() {
           </div>
         </section>
 
+        {/* Section 6: Tour Operator and Contracting Party */}
+        <section style={{ marginBottom: '3.5rem' }}>
+          <h2 style={{
+            fontFamily: 'var(--font-serif), serif',
+            fontSize: '1.8rem',
+            borderLeft: '2px solid #C39D63',
+            paddingLeft: '1rem',
+            marginBottom: '1.2rem',
+            color: '#121212',
+            fontWeight: 400
+          }}>
+            Tour Operator and Contracting Party
+          </h2>
+          <div style={{
+            backgroundColor: '#ffffff',
+            padding: '1.8rem',
+            borderRadius: '4px',
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.02)',
+            border: '1px solid rgba(18, 26, 22, 0.04)',
+            fontSize: '0.95rem',
+            color: '#555'
+          }}>
+            <p style={{ margin: '0 0 1.5rem 0', lineHeight: '1.6' }}>
+              This tour is planned and operated by Myoko Green Tourism Promotion Council, which will act as the contracting party for this tour.
+            </p>
+            <div style={{
+              borderTop: '1px solid rgba(18, 26, 22, 0.06)',
+              paddingTop: '1.2rem'
+            }}>
+              <div className="operator-row">
+                <span className="operator-label">Tour Operator / Contracting Party:</span>
+                <span className="operator-value">Myoko Green Tourism Promotion Council</span>
+              </div>
+              <div className="operator-row">
+                <span className="operator-label">Travel Business Registration:</span>
+                <span className="operator-value">Niigata Prefecture Governor Registered Travel Agency No. Chiiki-402 / Member of the All Nippon Travel Agents Association</span>
+              </div>
+              <div className="operator-row">
+                <span className="operator-label">Address:</span>
+                <span className="operator-value">6186-1 Sekiyama, Myoko City, Niigata, Japan</span>
+              </div>
+              <div className="operator-row">
+                <span className="operator-label">Certified Travel Service Manager:</span>
+                <span className="operator-value">Tomomitsu Tateno</span>
+              </div>
+              <div className="operator-row">
+                <span className="operator-label">Application / Inquiry:</span>
+                <span className="operator-value">Myoko Green Tourism Promotion Council</span>
+              </div>
+              <div className="operator-row">
+                <span className="operator-label">TEL:</span>
+                <span className="operator-value">+81-255-82-3935</span>
+              </div>
+              <div className="operator-row">
+                <span className="operator-label">FAX:</span>
+                <span className="operator-value">+81-255-82-3936</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Section 6: Information Validity Date */}
         <section style={{
           borderTop: '1px solid rgba(18, 26, 22, 0.08)',

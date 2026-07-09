@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { sendInquiryEmail } from '../../actions'
+import ContactTab from '../../components/ContactTab'
 
 // Custom High-Fidelity SVG Partner Logos (Same as 01 for brand alignment)
 const APAHotelLogo = () => (
@@ -324,7 +325,7 @@ ${formData.message}`;
       <section className="pricing">
         <div className="pricing-header">
           <h2 className="animate-up">Exclusive Package Details</h2>
-          <p className="animate-up" style={{transitionDelay: '0.1s'}}>A fully supported alpine endurance journey for X-Trekkers community members.</p>
+          <p className="animate-up" style={{transitionDelay: '0.1s'}}>A fully supported alpine endurance journey for active trail runners and nature enthusiasts.</p>
         </div>
         <div className="pricing-content">
           <div className="pricing-card animate-up" style={{transitionDelay: '0.2s'}}>
@@ -523,12 +524,7 @@ ${formData.message}`;
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
       </button>
 
-      <button 
-        className={`floating-cta ${isScrolled && !isInquiryVisible ? 'visible' : ''}`}
-        onClick={() => document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' })}
-      >
-        Inquire Now
-      </button>
+      <ContactTab />
     </>
   )
 }

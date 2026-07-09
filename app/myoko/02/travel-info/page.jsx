@@ -1,4 +1,6 @@
 import React from 'react'
+import ScrollToTop from '../../../components/ScrollToTop'
+import ContactTab from '../../../components/ContactTab'
 
 export const metadata = {
   title: 'Tour Price & Important Travel Information | Touch the Sky JAPAN',
@@ -379,6 +381,9 @@ export default function TravelInfoPage() {
       }}>
         <p style={{ margin: 0 }}>&copy; 2026 Touch the Sky JAPAN. Re-imagining Inbound Travel. Produced by DOUGHNUTSBROADCAST, INC.</p>
       </footer>
+
+      <ScrollToTop />
+      <ContactTab isDetailPage={true} />
     </div>
   )
 }

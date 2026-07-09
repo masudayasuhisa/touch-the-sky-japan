@@ -1119,3 +1119,66 @@ footer {
   .hero h1 span { font-size: 1.4rem; margin-top: 0.5rem; }
   .hero p.subcopy { font-size: 0.75rem; letter-spacing: 0; white-space: nowrap; }
 }
+
+/* Contact Tab styles matching myoko-rokkei */
+.contact-tab {
+  position: fixed;
+  z-index: 999;
+  background-color: #333333;
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  flex-direction: column;
+  padding: 24px 14px;
+  border-radius: 8px 0 0 8px;
+  writing-mode: vertical-rl;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.38em;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.contact-tab.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.contact-tab:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-50%) scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .contact-tab {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transform: none;
+    flex-direction: row;
+    padding: 20px 0;
+    border-radius: 0;
+    writing-mode: horizontal-tb;
+    letter-spacing: 0.38em;
+    font-size: 11px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  }
+  .contact-tab:hover {
+    transform: none;
+    background-color: var(--color-accent);
+  }
+}
+

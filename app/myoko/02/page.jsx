@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react'
 import { sendInquiryEmail } from '../../actions'
 
 // Custom High-Fidelity SVG Partner Logos (Same as 01 for brand alignment)
-const LotteAraiLogo = () => (
+const APAHotelLogo = () => (
   <svg className="svg-logo" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M20 42 L35 20 L45 32 L60 10 L75 42 Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-    <path d="M35 42 L45 34 L52 42 Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="currentColor" opacity="0.3" />
-    <text x="88" y="28" fontFamily="var(--font-serif)" fontSize="14" letterSpacing="0.1em" fill="currentColor" fontWeight="600">LOTTE ARAI</text>
-    <text x="88" y="42" fontFamily="var(--font-sans)" fontSize="9" letterSpacing="0.25em" fill="currentColor">RESORT</text>
+    <rect x="19" y="14" width="32" height="32" rx="4" stroke="currentColor" strokeWidth="2" fill="none" />
+    <text x="35" y="36" fontFamily="var(--font-serif)" fontSize="18" fontWeight="bold" fill="currentColor" textAnchor="middle">A</text>
+    <text x="68" y="28" fontFamily="var(--font-serif)" fontSize="13" letterSpacing="0.08em" fill="currentColor" fontWeight="600">APA HOTEL &amp; RESORT</text>
+    <text x="68" y="42" fontFamily="var(--font-sans)" fontSize="8.5" letterSpacing="0.05em" fill="currentColor">アパホテル＆リゾート〈上越妙高〉</text>
   </svg>
 );
 
@@ -214,7 +214,7 @@ ${formData.message}`;
               <div className="timeline-item animate-up" style={{transitionDelay: '0.3s'}}>
                 <h3>Day 1 (Sept 16): Opening the Door</h3>
                 <h4>Preparation & Connection</h4>
-                <p>Arrive in Myoko via the Shinkansen and transfer to the luxury Lotte Arai Resort from Joetsu-Myoko Station. We gather for an evening orientation, gear-check, dynamic mobility prep, and a welcome dinner showcasing seasonal local ingredients.</p>
+                <p>Arrive in Myoko via the Shinkansen and transfer to the scenic APA Hotel & Resort Joetsu Myoko from Joetsu-Myoko Station. We gather for an evening orientation, gear-check, dynamic mobility prep, and a welcome dinner showcasing seasonal local ingredients.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.4s'}}>
                 <h3>Day 2–3 (Sept 17–18): Trail Running Basics & Flow</h3>
@@ -229,7 +229,7 @@ ${formData.message}`;
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
                 <h3>Day 6–7 (Sept 21–22): Integration & Departure</h3>
                 <h4>Carrying the Flow Home</h4>
-                <p>Day 6 is dedicated to peaceful restoration. Enjoy a recovery yoga session, a walk to Naena Falls, or relax at the resort spa. On Day 7, checkout and take the resort shuttle to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
+                <p>Day 6 is dedicated to peaceful restoration. Enjoy a recovery yoga session, a walk to Naena Falls, or relax at the resort spa. On Day 7, checkout and take the hotel shuttle (reservation required) or local transport to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
               </div>
             </div>
           </div>
@@ -238,41 +238,29 @@ ${formData.message}`;
 
       <section className="venue">
         <div className="venue-text">
-          <h2 className="animate-up" style={{transitionDelay: '0.1s'}}><span>The Basecamp</span>Lotte Arai Resort</h2>
-          <p className="animate-up" style={{transitionDelay: '0.2s'}}>Set at the base of Mt. Okenashi, Lotte Arai Resort transitions from a legendary winter powder sanctuary to a vibrant, lush summer and autumn mountain paradise. It stands as Asia's premier luxury mountain basecamp, offering top-tier hospitality and premium rest for your adventure.</p>
-          <p className="animate-up" style={{transitionDelay: '0.3s'}}>From direct access to pristine forest trails to exquisite regional dining and soothing natural hot springs (onsen), the resort ensures a perfectly balanced, stress-free basecamp for your high-altitude endurance training and recovery.</p>
+          <h2 className="animate-up" style={{transitionDelay: '0.1s'}}><span>The Basecamp</span>APA Hotel & Resort Joetsu Myoko</h2>
+          <p className="animate-up" style={{transitionDelay: '0.2s'}}>Nestled high in the Myoko hills, APA Hotel & Resort Joetsu Myoko offers breathtaking panoramic views of the majestic Myoko mountain range. Surrounded by lush nature and rolling green hills, it stands as an exceptional mountain basecamp, providing comfortable accommodations, premium hospitality, and the perfect atmosphere to rest after your trail adventures.</p>
+          <p className="animate-up" style={{transitionDelay: '0.3s'}}>From its scenic location close to pristine forest trails to delicious local dining options and soothing natural open-air hot spring baths (onsen), the resort ensures a peaceful, stress-free basecamp for your training and physical recovery.</p>
         </div>
         <div className="venue-gallery animate-up">
           <div className="gallery-main">
-            <img src="/images/lotte_arai_interior.png" alt="Lotte Arai Resort Luxury Guest Room" />
-            <div className="gallery-label">Luxury Guest Room</div>
+            <img src="/images/apa_myoko_room.jpg" alt="APA Hotel & Resort Joetsu Myoko Guest Room" />
+            <div className="gallery-label">Guest Room</div>
           </div>
           <div className="gallery-sub">
             <div className="gallery-item">
-              <img src="/images/lotte_arai_exterior.png" alt="Lotte Arai Resort Summer Exterior" />
+              <img src="/images/apa_myoko_exterior.jpg" alt="APA Hotel & Resort Joetsu Myoko Exterior" />
               <div className="gallery-label">Resort Exterior</div>
             </div>
             <div className="gallery-item">
-              <img src="/images/lotte_arai_lobby.png" alt="Lotte Arai Resort Grand Lobby" />
-              <div className="gallery-label">Grand Lobby</div>
+              <img src="/images/apa_myoko_onsen.jpg" alt="APA Hotel & Resort Joetsu Myoko Outdoor Onsen" />
+              <div className="gallery-label">Outdoor Onsen</div>
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="video-section">
-        <div className="video-container animate-up">
-          <h2><span>Experience the Mountain</span>Official Resort Film</h2>
-          <div className="youtube-wrapper">
-            <iframe
-              src="https://www.youtube.com/embed/6jAElpWf7ZM"
-              title="Lotte Arai Resort Official Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
+        <p className="image-credit animate-up" style={{ fontSize: '0.65rem', opacity: 0.4, textAlign: 'right', marginTop: '0.5rem', width: '100%', fontStyle: 'italic', color: 'var(--color-text-light)' }}>
+          *Images from the official website (画像は公式サイトから)
+        </p>
       </section>
 
       <section className="myoko-intro">
@@ -339,7 +327,7 @@ ${formData.message}`;
         </div>
         <div className="partners-grid animate-up" style={{transitionDelay: '0.1s'}}>
           <div className="partner-logo">
-            <LotteAraiLogo />
+            <APAHotelLogo />
           </div>
           <div className="partner-logo">
             <NiigataPrefectureLogo />
@@ -373,7 +361,7 @@ ${formData.message}`;
             <p className="price-desc">Package Inclusions</p>
             <ul className="pricing-includes">
               <li>2-Day Guided Training Camp with English-speaking local coach</li>
-              <li>6 Nights Premium Accommodations at Lotte Arai Resort</li>
+              <li>6 Nights Premium Accommodations at APA Hotel & Resort Joetsu Myoko</li>
               <li>Welcome Dinner included on Day 1</li>
               <li>Post-run recovery yoga sessions</li>
               <li>Local English-speaking coordinator support during stay</li>
@@ -399,19 +387,19 @@ ${formData.message}`;
         <div className="access-container">
           <div className="access-map animate-up">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.999999999999!2d138.204683!3d37.038166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff672a95c9fb333%3A0xe54d989f55e5a7ef!2sLotte%20Arai%20Resort!5e0!3m2!1sen!2sjp!4v1700000000000!5m2!1sen!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.4239854743257!2d138.22570077651034!3d37.07828067215354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff5e5d36e2f1235%3A0x6e9f1937989d2d79!2sAPA%20Hotel%20%26%20Resort%20Joetsu%20Myoko!5e0!3m2!1sen!2sjp!4v1720512345678!5m2!1sen!2sjp"
               width="100%"
               height="450"
               style={{ border: 0, borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Lotte Arai Resort Google Map"
+              title="APA Hotel & Resort Joetsu Myoko Google Map"
             ></iframe>
           </div>
           <div className="access-info animate-up">
-            <h2><span>Location & Access</span>Getting to Lotte Arai Resort</h2>
-            <p className="access-intro">Located in Niigata Prefecture, Lotte Arai Resort is highly accessible from Tokyo's international hubs via the Hokuriku Shinkansen (Bullet Train).</p>
+            <h2><span>Location & Access</span>Getting to APA Hotel & Resort Joetsu Myoko</h2>
+            <p className="access-intro">Located in Niigata Prefecture, APA Hotel & Resort Joetsu Myoko is highly accessible from Tokyo's international hubs via the Hokuriku Shinkansen (Bullet Train).</p>
             
             <div className="route-option">
               <h3>From Haneda Airport (HND)</h3>
@@ -433,8 +421,8 @@ ${formData.message}`;
                 <li>
                   <span className="step-badge">Step 3</span>
                   <div>
-                    <strong>Resort Shuttle Bus or Taxi</strong>
-                    <p>Enjoy our complimentary resort shuttle or private taxi straight to the resort (approx. 30 mins).</p>
+                    <strong>Hotel Shuttle Bus or Taxi</strong>
+                    <p>Enjoy the hotel shuttle bus (approx. 25 mins, reservation required) or a private taxi straight to the resort.</p>
                   </div>
                 </li>
               </ul>
@@ -460,8 +448,8 @@ ${formData.message}`;
                 <li>
                   <span className="step-badge">Step 3</span>
                   <div>
-                    <strong>Resort Shuttle Bus or Taxi</strong>
-                    <p>Complimentary shuttle service directly to Lotte Arai Resort lobby (approx. 30 mins).</p>
+                    <strong>Hotel Shuttle Bus or Taxi</strong>
+                    <p>Enjoy the hotel shuttle bus directly to the lobby (approx. 25 mins, reservation required) or a private taxi.</p>
                   </div>
                 </li>
               </ul>

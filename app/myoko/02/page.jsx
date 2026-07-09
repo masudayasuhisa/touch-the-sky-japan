@@ -257,7 +257,7 @@ ${formData.message}`;
               <div className="gallery-label">Outdoor Onsen</div>
             </div>
           </div>
-          <p className="image-credit animate-up" style={{ fontSize: '0.65rem', opacity: 0.4, textAlign: 'right', marginTop: '0.5rem', width: '100%', fontStyle: 'italic', color: 'var(--color-text-light)' }}>
+          <p className="image-credit" style={{ fontSize: '0.65rem', opacity: 0.5, textAlign: 'right', marginTop: '0.5rem', width: '100%', fontStyle: 'italic', color: 'var(--color-text-dark)' }}>
             *Images from the official website (画像は公式サイトから)
           </p>
         </div>
@@ -387,7 +387,7 @@ ${formData.message}`;
         <div className="access-container">
           <div className="access-map animate-up">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.812347648356!2d138.22557437648344!3d36.91522036494323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff61b8f58310c13%3A0x6e788c7e42d76f3c!2sAPA%20Resort%20Joetsu%20Myoko!5e0!3m2!1sen!2sjp!4v1720523456789!5m2!1sen!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.999999999999!2d138.2514134!3d36.9022134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff617b3f0a49617%3A0x57e2a4270dcada0b!2z44Ki44OR44Ob44OG44Or77yG44Oq44K-44O844OI44CA5LiK6LaK5am56auY!5e0!3m2!1sja!2sjp!4v1720512345678!5m2!1sja!2sjp"
               width="100%"
               height="450"
               style={{ border: 0, borderRadius: '4px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}

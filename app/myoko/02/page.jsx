@@ -258,7 +258,7 @@ ${formData.message}`;
             </div>
           </div>
           <p className="image-credit" style={{ fontSize: '0.65rem', opacity: 0.5, textAlign: 'right', marginTop: '0.5rem', width: '100%', fontStyle: 'italic', color: 'var(--color-text-dark)' }}>
-            *Images from the official website (画像は公式サイトから)
+            *Images from the official website
           </p>
         </div>
       </section>
@@ -319,29 +319,6 @@ ${formData.message}`;
             </ul>
           </div>
         </div>
-      </section>
-
-      <section className="partners">
-        <div className="partners-header">
-          <h2 className="animate-up">Regional Collaboration & Alignment</h2>
-        </div>
-        <div className="partners-grid animate-up" style={{transitionDelay: '0.1s'}}>
-          <div className="partner-logo">
-            <APAHotelLogo />
-          </div>
-          <div className="partner-logo">
-            <NiigataPrefectureLogo />
-          </div>
-          <div className="partner-logo">
-            <MyokoCityLogo />
-          </div>
-          <div className="partner-logo">
-            <TourismAssociationLogo />
-          </div>
-        </div>
-        <p className="partners-note" style={{ textAlign: 'center', fontSize: '0.85rem', opacity: 0.6, marginTop: '2rem' }}>
-          *Official partnership and collaboration alignments are currently under consultation and pending final agreements.
-        </p>
       </section>
 
       <section className="pricing">
@@ -501,6 +478,11 @@ ${formData.message}`;
       </section>
 
       <footer>
+        <div style={{ marginBottom: '1rem' }}>
+          <a href="/myoko/02/travel-info" style={{ color: 'rgba(255, 255, 255, 0.6)', textDecoration: 'underline', fontSize: '0.85rem', transition: 'color 0.3s' }} onMouseOver={(e) => e.target.style.color = '#C39D63'} onMouseOut={(e) => e.target.style.color = 'rgba(255, 255, 255, 0.6)'}>
+            Tour Price &amp; Important Travel Information
+          </a>
+        </div>
         <p>&copy; 2026 Touch the Sky JAPAN. Re-imagining Inbound Travel. Produced by DOUGHNUTSBROADCAST, INC.</p>
       </footer>
 

@@ -20,6 +20,7 @@ export default function TravelInfoPage() {
     }}>
       {/* Navigation */}
       <nav style={{
+        position: 'relative',
         backgroundColor: '#121212',
         padding: '1.2rem 2rem',
         display: 'flex',

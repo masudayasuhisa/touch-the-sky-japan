@@ -235,7 +235,7 @@ export default function TrailRunningApp() {
                 <strong>Bi-lingual Mountain Guide:</strong> Gentle instruction in English covering uphill pacing, downhill balance, and breathing tactics.
               </li>
               <li>
-                <strong>Diverse Mountain Trails:</strong> Run and walk the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong> (exact routes are custom-tailored daily based on weather and trail conditions).
+                <strong>Diverse Mountain Trails:</strong> Run and walk the scenic paths of <strong>Sasagamine Plateau</strong>, the calming woods of <strong>Okazawa Forest</strong>, or the historic ridges of <strong>Mt. Myoko</strong>—including segments of the actual race course for a hands-on trial run and recce (exact routes are custom-tailored daily based on weather and trail conditions).
               </li>
               <li>
                 <strong>Course Strategy:</strong> Group orientation and course maps to prepare you for the unique elevation profile of the Golden Trail National Series race.

@@ -332,6 +332,17 @@ ${formData.message}`;
               <span className="schedule-badge">Special Edition</span>
               <h3>Sept 16–22, 2026</h3>
             </div>
+
+            <div className="price-display" style={{ marginBottom: '2.5rem', borderBottom: '1px solid rgba(0,0,0,0.05)', paddingBottom: '2rem' }}>
+              <p style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Tour Price</p>
+              <h4 className="serif" style={{ fontSize: '2rem', color: 'var(--color-bg-dark)', fontWeight: '400', margin: '0 0 0.5rem 0', lineHeight: '1.2' }}>
+                JPY 367,700 – JPY 379,800 <span style={{ fontSize: '1rem', color: '#666', fontStyle: 'italic' }}>(including tax)</span>
+              </h4>
+              <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>
+                Base Tour Price is JPY 360,000 including tax. The race entry fee will be added depending on the race category selected.
+              </p>
+            </div>
+
             <p className="price-desc" style={{ fontWeight: 'bold', color: 'var(--color-accent)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
               Designed for hikers, hiker-to-run beginners, and outdoor lovers. (Prerequisite: Comfortably walk/lightly jog 5–10km in nature)
             </p>
@@ -356,6 +367,24 @@ ${formData.message}`;
             <p className="pricing-note" style={{ color: 'var(--color-accent)', fontWeight: '500', marginTop: '1.5rem' }}>
               ⚠️ Important Note: Race registration capacity is limited. Early booking is highly recommended. Registration closes August 3, 2026 (or when capacity is reached).
             </p>
+
+            <div style={{ marginTop: '2.5rem', borderTop: '1px solid rgba(0,0,0,0.05)', paddingTop: '2rem', textAlign: 'center' }}>
+              <a href="/myoko/02/travel-info" style={{
+                display: 'inline-block',
+                padding: '0.8rem 2rem',
+                backgroundColor: 'var(--color-accent)',
+                color: '#fff',
+                textDecoration: 'none',
+                fontSize: '0.85rem',
+                textTransform: 'uppercase',
+                letterSpacing: '0.15em',
+                fontWeight: '500',
+                transition: 'all 0.3s ease',
+                borderRadius: '2px'
+              }} onMouseOver={(e) => e.target.style.backgroundColor = '#a88147'} onMouseOut={(e) => e.target.style.backgroundColor = 'var(--color-accent)'}>
+                View Tour Price Details &amp; Travel Terms
+              </a>
+            </div>
           </div>
         </div>
       </section>

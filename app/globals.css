@@ -1209,10 +1209,10 @@ footer {
 
 /* Myoko Trail Race Section */
 .race-info {
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-light);
+  background-color: #f5f3ef;
+  color: var(--color-text-dark);
   padding: 8rem 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .race-info-container {
@@ -1230,7 +1230,7 @@ footer {
 .race-info-text h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
-  color: var(--color-text-light);
+  color: var(--color-bg-dark);
 }
 
 .race-info-text h2 span {
@@ -1245,7 +1245,7 @@ footer {
 
 .race-info-text p {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-text-dark);
   margin-bottom: 1.5rem;
 }
 

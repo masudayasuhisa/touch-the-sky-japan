@@ -160,7 +160,7 @@ export default function TrailRunningApp() {
               <div className="timeline-item animate-up" style={{transitionDelay: '0.3s'}}>
                 <h3>Day 1 (Sept 16): Opening the Door</h3>
                 <h4>Preparation & Connection</h4>
-                <p>Arrive in Myoko via the Shinkansen and transfer to the scenic APA Hotel & Resort Joetsu Myoko from Joetsu-Myoko Station. We gather for an evening orientation, gear-check, dynamic mobility prep, and a welcome dinner showcasing seasonal local ingredients.</p>
+                <p>Arrive in Myoko via the Shinkansen. Gather at Joetsu-Myoko Station at 13:30 for the group transfer to the scenic APA Hotel & Resort Joetsu Myoko. We gather for an evening orientation, gear-check, dynamic mobility prep, and dinner showcasing seasonal local ingredients.</p>
               </div>
               <div className="timeline-item animate-up" style={{transitionDelay: '0.4s'}}>
                 <h3>Day 2–3 (Sept 17–18): Trail Running Basics & Flow</h3>
@@ -175,7 +175,7 @@ export default function TrailRunningApp() {
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
                 <h3>Day 6–7 (Sept 21–22): Integration & Departure</h3>
                 <h4>Carrying the Flow Home</h4>
-                <p>Day 6 is dedicated to peaceful restoration. Enjoy a walk to Naena Falls, or relax at the resort spa. On Day 7, checkout and take the hotel shuttle (reservation required) or local transport to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
+                <p>Day 6 is dedicated to peaceful restoration. Enjoy a walk to Naena Falls, or relax at the resort spa. On Day 7, checkout and take the included transfer to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
               </div>
             </div>
           </div>
@@ -279,10 +279,10 @@ export default function TrailRunningApp() {
             <div className="price-display" style={{ marginBottom: '2.5rem', borderBottom: '1px solid rgba(0,0,0,0.05)', paddingBottom: '2rem' }}>
               <p style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-accent)', margin: '0 0 0.5rem 0', fontWeight: 'bold' }}>Tour Price</p>
               <h4 className="serif" style={{ fontSize: '2rem', color: 'var(--color-bg-dark)', fontWeight: '400', margin: '0 0 0.5rem 0', lineHeight: '1.2' }}>
-                JPY 367,700 – JPY 379,800 <span style={{ fontSize: '1rem', color: '#666', fontStyle: 'italic' }}>(including tax)</span>
+                JPY 367,000 – JPY 378,000 + GST <span style={{ fontSize: '1rem', color: '#666', fontStyle: 'italic' }}>(for reference purpose only)</span>
               </h4>
               <p style={{ fontSize: '0.9rem', color: '#666', margin: 0 }}>
-                Base Tour Price is JPY 360,000 including tax. The race entry fee will be added depending on the race category selected.
+                Base Tour Price is JPY 360,000 exclusive of GST (10%). The race entry fee will be added depending on the race category selected.
               </p>
             </div>
 
@@ -292,16 +292,17 @@ export default function TrailRunningApp() {
             <p className="price-desc">Package Inclusions</p>
             <ul className="pricing-includes">
               <li>2-Day Guided Training Camp with English-speaking local coach</li>
-              <li>6 Nights Premium Accommodations at APA Hotel & Resort Joetsu Myoko</li>
-              <li>Welcome Dinner included on Day 1</li>
-              <li>Local English-speaking coordinator support during stay</li>
+              <li>6 Nights Premium Accommodations at APA Hotel & Resort Joetsu Myoko (including breakfast & dinner)</li>
+              <li>Partial logistics arrangements (chartered bus transportation) during the itinerary</li>
+              <li>Insurance coverage during the program</li>
+              <li>Local English-speaking coordinator/tour conductor support during stay</li>
               <li>Guided cultural activities (Soba making, coffee roasting, Sasa-dango craft)</li>
               <li>Official training materials and course maps</li>
             </ul>
             <p className="pricing-note" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>* Exclusions & Details:</p>
             <ul className="pricing-includes" style={{ opacity: 0.85 }}>
-              <li>Flights and international/domestic transportation to/from Joetsu-Myoko Station</li>
-              <li>Daily meals (except the Day 1 Welcome Dinner) and personal sightseeing expenses</li>
+              <li>Flights and international/domestic transportation to/from Joetsu-Myoko Station (Shinkansen, etc.)</li>
+              <li>Lunches and personal sightseeing expenses</li>
               <li>
                 <strong>Race Registration & Transfers:</strong> Race registration is handled separately to allow participants to choose their preferred category. We will provide guidance and support for the registration process. Shuttles to the starting line are managed via independent local services.
               </li>
@@ -369,8 +370,8 @@ export default function TrailRunningApp() {
                 <li>
                   <span className="step-badge">Step 3</span>
                   <div>
-                    <strong>Hotel Shuttle Bus or Taxi</strong>
-                    <p>Enjoy the hotel shuttle bus (approx. 25 mins, reservation required) or a private taxi straight to the resort.</p>
+                    <strong>Group Transfer or Taxi</strong>
+                    <p>Join the scheduled group transfer departing Joetsu-Myoko Station at 13:30 on Day 1 (please plan your arrival to meet this schedule), or take a private taxi straight to the resort.</p>
                   </div>
                 </li>
               </ul>
@@ -396,8 +397,8 @@ export default function TrailRunningApp() {
                 <li>
                   <span className="step-badge">Step 3</span>
                   <div>
-                    <strong>Hotel Shuttle Bus or Taxi</strong>
-                    <p>Enjoy the hotel shuttle bus directly to the lobby (approx. 25 mins, reservation required) or a private taxi.</p>
+                    <strong>Group Transfer or Taxi</strong>
+                    <p>Join the scheduled group transfer departing Joetsu-Myoko Station at 13:30 on Day 1 (please plan your arrival to meet this schedule), or take a private taxi straight to the resort.</p>
                   </div>
                 </li>
               </ul>

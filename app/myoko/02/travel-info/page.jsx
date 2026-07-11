@@ -107,10 +107,10 @@ export default function TravelInfoPage() {
             marginBottom: '2rem'
           }}>
             <p style={{ fontSize: '1.25rem', color: '#121212', fontWeight: 500, marginBottom: '0.5rem' }}>
-              Tour Price: JPY 367,700 – JPY 379,800 <span style={{ fontSize: '0.9rem', fontWeight: 300, color: '#666' }}>(including tax)</span>
+              Tour Price: JPY 367,000 – JPY 378,000 + GST <span style={{ fontSize: '0.9rem', fontWeight: 300, color: '#666' }}>(for reference purpose only)</span>
             </p>
             <p style={{ color: '#555', fontSize: '0.95rem', margin: 0 }}>
-              The base tour price is JPY 360,000 including tax. The race entry fee will be added depending on the race category selected.
+              The base tour price is JPY 360,000 exclusive of GST (10%). The race entry fee will be added depending on the race category selected.
             </p>
           </div>
 
@@ -124,38 +124,39 @@ export default function TravelInfoPage() {
               <thead>
                 <tr style={{ borderBottom: '2px solid #C39D63', color: '#121212' }}>
                   <th style={{ padding: '12px 8px', fontWeight: 600 }}>Race Category</th>
-                  <th style={{ padding: '12px 8px', fontWeight: 600 }}>Base Tour Price</th>
-                  <th style={{ padding: '12px 8px', fontWeight: 600 }}>Race Entry Fee <span style={{ fontWeight: 300, fontSize: '0.8rem' }}>(incl. tax)</span></th>
-                  <th style={{ padding: '12px 8px', fontWeight: 600 }}>Total Tour Price <span style={{ fontWeight: 300, fontSize: '0.8rem' }}>(incl. tax)</span></th>
+                  <th style={{ padding: '12px 8px', fontWeight: 600 }}>Base Tour Price <span style={{ fontWeight: 300, fontSize: '0.8rem' }}>(excl. GST)</span></th>
+                  <th style={{ padding: '12px 8px', fontWeight: 600 }}>Race Entry Fee <span style={{ fontWeight: 300, fontSize: '0.8rem' }}>(excl. GST)</span></th>
+                  <th style={{ padding: '12px 8px', fontWeight: 600 }}>Total Tour Price <span style={{ fontWeight: 300, fontSize: '0.8rem' }}>(excl. GST)</span></th>
                 </tr>
               </thead>
               <tbody>
                 <tr style={{ borderBottom: '1px solid rgba(18, 26, 22, 0.06)' }}>
                   <td style={{ padding: '12px 8px', fontWeight: 500 }}>GTWS 23.5km</td>
                   <td style={{ padding: '12px 8px' }}>JPY 360,000</td>
-                  <td style={{ padding: '12px 8px' }}>JPY 19,800</td>
-                  <td style={{ padding: '12px 8px', fontWeight: 500, color: '#C39D63' }}>JPY 379,800</td>
+                  <td style={{ padding: '12px 8px' }}>JPY 18,000</td>
+                  <td style={{ padding: '12px 8px', fontWeight: 500, color: '#C39D63' }}>JPY 378,000</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid rgba(18, 26, 22, 0.06)' }}>
                   <td style={{ padding: '12px 8px', fontWeight: 500 }}>Myoko Trail 11km</td>
                   <td style={{ padding: '12px 8px' }}>JPY 360,000</td>
-                  <td style={{ padding: '12px 8px' }}>JPY 9,900</td>
-                  <td style={{ padding: '12px 8px', fontWeight: 500, color: '#C39D63' }}>JPY 369,900</td>
+                  <td style={{ padding: '12px 8px' }}>JPY 9,000</td>
+                  <td style={{ padding: '12px 8px', fontWeight: 500, color: '#C39D63' }}>JPY 369,000</td>
                 </tr>
                 <tr style={{ borderBottom: '1px solid rgba(18, 26, 22, 0.06)' }}>
                   <td style={{ padding: '12px 8px', fontWeight: 500 }}>Myoko Trail 5km</td>
                   <td style={{ padding: '12px 8px' }}>JPY 360,000</td>
-                  <td style={{ padding: '12px 8px' }}>JPY 7,700</td>
-                  <td style={{ padding: '12px 8px', fontWeight: 500, color: '#C39D63' }}>JPY 367,700</td>
+                  <td style={{ padding: '12px 8px' }}>JPY 7,000</td>
+                  <td style={{ padding: '12px 8px', fontWeight: 500, color: '#C39D63' }}>JPY 367,000</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <div style={{ fontSize: '0.8rem', color: '#666', lineHeight: '1.6', marginBottom: '2rem' }}>
-            <p style={{ margin: '2px 0' }}>※ The GTWS 23.5km race entry fee is JPY 18,000 plus 10% consumption tax.</p>
-            <p style={{ margin: '2px 0' }}>※ The Myoko Trail 11km race entry fee is JPY 9,000 plus 10% consumption tax.</p>
-            <p style={{ margin: '2px 0' }}>※ The Myoko Trail 5km race entry fee is JPY 7,000 plus 10% consumption tax.</p>
+            <p style={{ margin: '2px 0' }}>※ A 10% Goods and Services Tax (GST) will be added to the total amount.</p>
+            <p style={{ margin: '2px 0' }}>※ The GTWS 23.5km race entry fee is JPY 18,000 plus 10% GST.</p>
+            <p style={{ margin: '2px 0' }}>※ The Myoko Trail 11km race entry fee is JPY 9,000 plus 10% GST.</p>
+            <p style={{ margin: '2px 0' }}>※ The Myoko Trail 5km race entry fee is JPY 7,000 plus 10% GST.</p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
@@ -256,7 +257,7 @@ export default function TravelInfoPage() {
             }}>
               <h3 style={{ fontSize: '1rem', fontWeight: 500, color: '#121212', margin: '0 0 0.8rem 0', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#C39D63' }}></span>
-                Minimum number of participants: 10
+                Minimum number of participants: ten (10)
               </h3>
               <p style={{ fontSize: '0.9rem', color: '#555', margin: '0 0 0.5rem 0' }}>
                 The tour may be cancelled if the minimum number of participants is not reached.

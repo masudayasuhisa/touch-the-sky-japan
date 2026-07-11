@@ -175,7 +175,7 @@ export default function TrailRunningApp() {
               <div className="timeline-item animate-up" style={{transitionDelay: '0.6s'}}>
                 <h3>Day 6–7 (Sept 21–22): Integration & Departure</h3>
                 <h4>Carrying the Flow Home</h4>
-                <p>Day 6 is dedicated to peaceful restoration. Enjoy a walk to Naena Falls, or relax at the resort spa. On Day 7, checkout and take the included transfer to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
+                <p>Day 6 is dedicated to peaceful restoration and local culture. We plan to arrange a guided Japanese cultural experience (such as Soba noodle making, traditional Sasa-sushi crafting, or coffee roasting), customized depending on participants' physical conditions and group preferences, alongside a visit to Naena Falls or the resort spa. On Day 7, checkout and take the included transfer to Joetsu-Myoko Station, carrying home a certificate and a completely expanded way of enjoying the mountains.</p>
               </div>
             </div>
           </div>
@@ -245,16 +245,16 @@ export default function TrailRunningApp() {
           <div className="activity-card animate-up" style={{transitionDelay: '0.3s'}}>
             <div className="activity-badge">Gastronomy & Culture</div>
             <h3>Local Craft & Recovery</h3>
-            <p className="activity-sub">Recharge your body and mind through authentic Japanese culture. (We will customize and select the activities from the menu below based on participants' physical conditions and group preferences.)</p>
+            <p className="activity-sub">Recharge your body and mind through authentic Japanese culture. On Day 6, we plan to organize a guided local experience. The exact activities will be customized and arranged depending on participants' conditions and group interests.</p>
             <ul className="activity-list">
               <li>
-                <strong>Soba Buckwheat Noodle Craft:</strong> A private workshop with a local chef to knead and cut your own recovery noodles.
+                <strong>Soba Buckwheat Noodle Craft:</strong> A potential workshop with a local chef to knead and cut your own recovery noodles.
               </li>
               <li>
-                <strong>Coffee Roasting & Blending:</strong> Learn the craft of roasting green beans and blending your own custom coffee for your outdoor adventures.
+                <strong>Coffee Roasting & Blending:</strong> A candidate activity to learn the craft of roasting green beans and blending your own custom coffee.
               </li>
               <li>
-                <strong>Traditional Sweet Making:</strong> Hands-on experience making <strong>Sasa-dango</strong> (traditional mugwort rice cakes filled with sweet red bean paste and wrapped in bamboo grass).
+                <strong>Local Food Crafting:</strong> A hands-on opportunity to make traditional <strong>Sasa-sushi</strong> (local sushi wrapped in bamboo grass) or other seasonal local dishes.
               </li>
               <li>
                 <strong>Hot Spring Recovery:</strong> Learn the custom of Japanese open-air onsen bathing to naturally soothe muscles and joints.
@@ -296,7 +296,7 @@ export default function TrailRunningApp() {
               <li>Partial logistics arrangements (chartered bus transportation) during the itinerary</li>
               <li>Insurance coverage during the program</li>
               <li>Local English-speaking coordinator/tour conductor support during stay</li>
-              <li>Guided cultural activities (Soba making, coffee roasting, Sasa-dango craft)</li>
+              <li>Guided Japanese cultural experience on Day 6 (customized based on group preferences)</li>
               <li>Official training materials and course maps</li>
             </ul>
             <p className="pricing-note" style={{ marginTop: '1.5rem', fontWeight: 'bold' }}>* Exclusions & Details:</p>

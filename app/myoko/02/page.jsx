@@ -304,7 +304,7 @@ export default function TrailRunningApp() {
               <li>Flights and international/domestic transportation to/from Joetsu-Myoko Station (Shinkansen, etc.)</li>
               <li>Lunches and personal sightseeing expenses</li>
               <li>
-                <strong>Race Registration & Transfers:</strong> Race registration is handled separately to allow participants to choose their preferred category. We will provide guidance and support for the registration process. Shuttles to the starting line are managed via independent local services.
+                <strong>Race Registration:</strong> Race registration is handled separately to allow participants to choose their preferred category. We will provide guidance and support for the registration process.
               </li>
             </ul>
             <p className="pricing-note" style={{ color: 'var(--color-accent)', fontWeight: '500', marginTop: '1.5rem' }}>

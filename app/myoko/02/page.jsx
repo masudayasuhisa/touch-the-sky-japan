@@ -83,9 +83,10 @@ export default function TrailRunningApp() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   const programImages = [
-    "/images/program_trail_camp.png",
-    "/images/concept_trail_running.png",
-    "/images/hero_trail_running.png"
+    "/images/gtws_main_001.webp",
+    "/images/gtws_main_004.webp",
+    "/images/gtws_main_005.webp",
+    "/images/gtws_main_006.webp"
   ];
 
   const myokoImages = [
@@ -126,7 +127,7 @@ export default function TrailRunningApp() {
         <a href="#inquiry" className="btn-inquiry animate-up" style={{transitionDelay: '0.2s'}}>Inquire Now</a>
       </nav>
 
-      <header className="hero" style={{ backgroundImage: "url('/images/hero_trail_running.png')" }}>
+      <header className="hero" style={{ backgroundImage: "url('/images/gtws_main_003.webp')" }}>
         <div className="hero-content">
           <p className="collection animate-up" style={{transitionDelay: '0.3s'}}>Myoko Collection #02</p>
           <h1 className="animate-up" style={{transitionDelay: '0.5s'}}>From Hiking <br className="mobile-break"/>to Trail Running<span>Expand Your Mountain Experience</span></h1>
@@ -145,7 +146,7 @@ export default function TrailRunningApp() {
           <p className="animate-up" style={{transitionDelay: '0.3s', fontStyle: 'italic', color: 'var(--color-accent)' }}>From hiking to trail running. From scenery to sensation. From visiting the mountains to moving with them.</p>
         </div>
         <div className="concept-image animate-up" style={{transitionDelay: '0.4s'}}>
-          <img src="/images/concept_trail_running.png" alt="Adult trail runners experiencing the lush forests of Myoko" />
+          <img src="/images/gtws_main_004.webp" alt="Adult trail runners experiencing the lush forests of Myoko" />
         </div>
       </section>
 

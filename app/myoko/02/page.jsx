@@ -183,6 +183,31 @@ export default function TrailRunningApp() {
         </div>
       </section>
 
+      <section className="race-info">
+        <div className="race-info-container">
+          <div className="race-info-text animate-up">
+            <h2><span>The Highlight Event</span>MYOKO TRAIL</h2>
+            <p>
+              The MYOKO TRAIL is a world-class trail running race set against the dramatic volcanic peaks and pristine wilderness of Niigata Prefecture. As an associated race of the prestigious <strong>Golden Trail National Series Japan</strong> (part of the global <strong>Golden Trail World Series</strong>), it stands as one of the country's premier mountain running stages.
+            </p>
+            <p>
+              Under the GTWS framework, top national and international athletes gather here to challenge technical alpine ridges, sweeping volcanic singletracks, and lush, ancient forests. With race categories of 23.5km, 11km, and 5km, it is an inspiring stage for every level of runner—whether you are a hiker taking your first running steps or an experienced runner pushing your limits.
+            </p>
+            <a 
+              href="https://www.nature-scene.net/gtws/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-race-link"
+            >
+              Official Race Website
+            </a>
+          </div>
+          <div className="race-info-logo animate-up" style={{ transitionDelay: '0.2s' }}>
+            <img src="/images/myoko_trail_emblem.svg" alt="Myoko Trail Emblem" />
+          </div>
+        </div>
+      </section>
+
       <section className="venue">
         <div className="venue-text">
           <h2 className="animate-up" style={{transitionDelay: '0.1s'}}><span>The Basecamp</span>APA Hotel & Resort Joetsu Myoko</h2>

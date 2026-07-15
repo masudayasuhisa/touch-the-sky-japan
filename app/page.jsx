@@ -102,7 +102,7 @@ export default function App() {
       
       await sendInquiryEmail(data);
 
-      const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '819012345678';
+      const waNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '819022171597';
       const text = `Hello Touch The Sky Japan! I would like to inquire about the program.
 
 Name: ${formData.name}

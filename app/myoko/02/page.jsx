@@ -438,7 +438,7 @@ export default function TrailRunningApp() {
         <p className="animate-up" style={{transitionDelay: '0.1s'}}>Take the first step towards a premium endurance experience in Myoko.<br /><span style={{ fontSize: '0.9rem', opacity: 0.8, display: 'inline-block', marginTop: '0.5rem' }}>(Limited seats / Inquiry first / No obligation)</span></p>
         <div className="animate-up" style={{transitionDelay: '0.2s', marginTop: '2.5rem', textAlign: 'center'}}>
           <a 
-            href="https://wa.me/819022171597" 
+            href="https://wa.me/819063309143" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn-primary"

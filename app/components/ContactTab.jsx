@@ -32,7 +32,7 @@ export default function ContactTab({ isDetailPage = false }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [isDetailPage])
 
-  const targetUrl = 'https://wa.me/819022171597'
+  const targetUrl = 'https://wa.me/819063309143'
 
   return (
     <a 
